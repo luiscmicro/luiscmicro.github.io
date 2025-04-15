@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Documentation - Category - LCNotebook</title>
-        <link>https://www.cantulab.com/categories/documentation/</link>
-        <description>Documentation - Category - LCNotebook</description>
+        <title>Documentation - Category - Luis Cantu</title>
+        <link>https://luiscmicro.github.io/categories/documentation/</link>
+        <description>Documentation - Category - Luis Cantu</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>luis_cantu@berkeley.edu (Luis Cantu)</managingEditor>
-            <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><atom:link href="https://www.cantulab.com/categories/documentation/" rel="self" type="application/rss+xml" /></channel>
+            <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><atom:link href="https://luiscmicro.github.io/categories/documentation/" rel="self" type="application/rss+xml" /></channel>
 </rss>

@@ -215,7 +215,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     [params.home.profile]
       enable = true
       avatarURL = "/images/avatar.png"
+      #Computational Biology | Protein Engineering | Analytical Chemistry | LCMS · FPLC · Biochemistry · Software Developmen
       subtitle = "Computational Biology | Protein Engineering | Analytical Chemistry | LCMS · FPLC · Biochemistry · Software Development"
+      disclaimer = "NSF Graduate Research Fellow — Traxler Lab, UC Berkeley<br>📍 *Plant & Microbial Biology, University of California, Berkeley<br>📧 <a href='mailto:luis_cantu@berkeley.edu'>luis_cantu@berkeley.edu</a>"
       typeit = false
       social = true
     [params.home.posts]

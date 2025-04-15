@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications on LCNotebook</title>
-    <link>https://www.cantulab.com/publications/</link>
-    <description>Recent content in Publications on LCNotebook</description>
+    <title>Publications on Luis Cantu</title>
+    <link>https://luiscmicro.github.io/publications/</link>
+    <description>Recent content in Publications on Luis Cantu</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>luis_cantu@berkeley.edu (Luis Cantu)</managingEditor>
     <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster>
-    <lastBuildDate>Wed, 09 Apr 2025 02:50:17 -0700</lastBuildDate>
-    <atom:link href="https://www.cantulab.com/publications/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Apr 2025 18:22:15 -0700</lastBuildDate>
+    <atom:link href="https://luiscmicro.github.io/publications/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Publications</title>
-      <link>https://www.cantulab.com/publications/2025-04-09-publications/</link>
+      <link>https://luiscmicro.github.io/publications/2025-04-09-publications/</link>
       <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate><author>luis_cantu@berkeley.edu (Luis Cantu)</author>
-      <guid>https://www.cantulab.com/publications/2025-04-09-publications/</guid>
+      <guid>https://luiscmicro.github.io/publications/2025-04-09-publications/</guid>
       <description>&lt;h3 id=&#34;2025&#34;&gt;2025&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Why do filamentous Actinomycetota produce such a vast array of specialized metabolites?&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Cantu Morin LM, Dekoninck K, Sridhar V, et al &amp;hellip;&lt;/em&gt;&lt;br&gt;&#xA;📄 &lt;em&gt;Annual Review of Microbiology.&lt;/em&gt; (In press)&lt;/p&gt;&#xA;&lt;h3 id=&#34;2024&#34;&gt;2024&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Cryptic environmental conjugative plasmid recruits a novel hybrid transposon resulting in a new plasmid with higher dispersion potential&lt;/strong&gt;&lt;br&gt;&#xA;&lt;em&gt;I. Muñoz-Gutiérrez, L. Cantu, J. Shanahan, M. Girguis, M. de la Cruz, &amp;hellip;&lt;/em&gt;&lt;br&gt;&#xA;📄 &lt;em&gt;mSphere&lt;/em&gt; 9(6), &lt;a href=&#34;https://doi.org/10.1128/msphere.00252-24&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;e00252-24&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;2021&#34;&gt;2021&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;The cvn8 Conservon System Is a Global Regulator of Specialized Metabolism in &lt;em&gt;Streptomyces coelicolor&lt;/em&gt; during Interspecies Interactions&lt;/strong&gt;&lt;br&gt;&#xA;&lt;em&gt;B. Bonet, Y. Ra, L.M. Cantu Morin, J. Soto Bustos, J. Livny, M.F. Traxler&lt;/em&gt;&lt;br&gt;&#xA;📄 &lt;em&gt;mSystems&lt;/em&gt; 6(5), &lt;a href=&#34;https://doi.org/10.1128/msystems.00281-21&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;10.1128/msystems.00281-21&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>

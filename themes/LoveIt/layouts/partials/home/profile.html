@@ -38,6 +38,12 @@
             {{- end -}}
         </div>
     {{- end -}}
+    
+    {{- with $profile.disclaimer -}}
+        <h3 class="home-disclaimer">
+            {{- . | safeHTML -}}
+        </h3>
+    {{- end -}}
 
     {{- if $profile.social -}}
         <div class="links">
@@ -93,9 +99,4 @@
         </div>
     {{- end -}}
 
-    {{- with $profile.disclaimer -}}
-        <h3 class="home-disclaimer">
-            {{- . | safeHTML -}}
-        </h3>
-    {{- end -}}
 </div>

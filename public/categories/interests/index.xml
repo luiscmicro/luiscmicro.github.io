@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Interests - Category - LCNotebook</title>
-        <link>https://www.cantulab.com/categories/interests/</link>
-        <description>Interests - Category - LCNotebook</description>
+        <title>Interests - Category - Luis Cantu</title>
+        <link>https://luiscmicro.github.io/categories/interests/</link>
+        <description>Interests - Category - Luis Cantu</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>luis_cantu@berkeley.edu (Luis Cantu)</managingEditor>
-            <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><lastBuildDate>Wed, 09 Apr 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.cantulab.com/categories/interests/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><lastBuildDate>Wed, 09 Apr 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://luiscmicro.github.io/categories/interests/" rel="self" type="application/rss+xml" /><item>
     <title>Analytical Chemistry</title>
-    <link>https://www.cantulab.com/2025-04-09-analytical-chemistry/</link>
+    <link>https://luiscmicro.github.io/2025-04-09-analytical-chemistry/</link>
     <pubDate>Wed, 09 Apr 2025 00:00:00 &#43;0000</pubDate>
     <author>Luis Cantu</author>
-    <guid>https://www.cantulab.com/2025-04-09-analytical-chemistry/</guid>
+    <guid>https://luiscmicro.github.io/2025-04-09-analytical-chemistry/</guid>
     <description><![CDATA[<p>Techniques like MALDI IMS offer insights into the production of antibiotics during interspecies interactions. By mapping the spatial distribution of metabolites directly on microbial colonies, these approaches reveal how physical proximity and competition influence specialized metabolism. Such tools help uncover the ecological roles of antibiotics—not just as therapeutic agents, but as molecular signals involved in microbial communication, defense, and niche establishment.</p>
 <figure><figcaption>
       <h4>Fig1. Production of amychelin by Amycolaptosis sp during interspecies interactions</h4>
@@ -18,26 +18,26 @@
 </item>
 <item>
     <title>Genomes &amp; Regulatory Networks</title>
-    <link>https://www.cantulab.com/2025-04-09-genomes-regulatory-networks/</link>
+    <link>https://luiscmicro.github.io/2025-04-09-genomes-regulatory-networks/</link>
     <pubDate>Wed, 09 Apr 2025 00:00:00 &#43;0000</pubDate>
     <author>Luis Cantu</author>
-    <guid>https://www.cantulab.com/2025-04-09-genomes-regulatory-networks/</guid>
+    <guid>https://luiscmicro.github.io/2025-04-09-genomes-regulatory-networks/</guid>
     <description><![CDATA[Evolution of actinomycetota and genome mining]]></description>
 </item>
 <item>
     <title>Software Development</title>
-    <link>https://www.cantulab.com/2025-04-09-software-development/</link>
+    <link>https://luiscmicro.github.io/2025-04-09-software-development/</link>
     <pubDate>Wed, 09 Apr 2025 00:00:00 &#43;0000</pubDate>
     <author>Luis Cantu</author>
-    <guid>https://www.cantulab.com/2025-04-09-software-development/</guid>
+    <guid>https://luiscmicro.github.io/2025-04-09-software-development/</guid>
     <description><![CDATA[Software development to detect evolution]]></description>
 </item>
 <item>
     <title>Microbial Interactions</title>
-    <link>https://www.cantulab.com/2025-04-08-microbial-interactions/</link>
+    <link>https://luiscmicro.github.io/2025-04-08-microbial-interactions/</link>
     <pubDate>Tue, 08 Apr 2025 00:00:00 &#43;0000</pubDate>
     <author>Luis Cantu</author>
-    <guid>https://www.cantulab.com/2025-04-08-microbial-interactions/</guid>
+    <guid>https://luiscmicro.github.io/2025-04-08-microbial-interactions/</guid>
     <description><![CDATA[<p>Microorganisms rarely live in isolation. Instead, they inhabit complex, multispecies communities where interactions between neighbors determine survival, access to resources, and ecological success. These interactions—whether antagonistic, cooperative, or neutral—are the foundation of microbial ecology. From nutrient sharing and metabolic cross-feeding to chemical warfare and spatial competition, microbes engage in a rich spectrum of behaviors that reflect the evolutionary pressures of life in dense, dynamic environments.</p>
 <p>My research is motivated by the idea that understanding these microbial interactions can reveal the rules of microbial life that govern natural systems, as well as inform the design of synthetic communities or therapeutic interventions. In particular, I’m fascinated by the role of specialized metabolites—antibiotics, siderophores, and signaling molecules—as mediators of interaction. These compounds often reflect an evolutionary arms race, but they can also coordinate multicellular behaviors or enable interspecies symbioses. By dissecting the molecular basis of these interactions, we can better understand how microbes structure their environments and influence broader ecological or clinical outcomes.</p>
 <p>Focusing on microbial interactions also brings a systems-level perspective to microbiology. Rather than studying a single microbe in isolation, it invites us to ask how genetic programs, regulatory networks, and biochemical capabilities are modulated by the presence of others. For me, this view has reshaped how I think about microbial function—not just in terms of individual fitness, but as part of a broader network of exchange, competition, and adaptation.</p>]]></description>

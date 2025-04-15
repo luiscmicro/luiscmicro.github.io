@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Publications - Category - LCNotebook</title>
-        <link>https://www.cantulab.com/categories/publications/</link>
-        <description>Publications - Category - LCNotebook</description>
+        <title>Publications - Category - Luis Cantu</title>
+        <link>https://luiscmicro.github.io/categories/publications/</link>
+        <description>Publications - Category - Luis Cantu</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>luis_cantu@berkeley.edu (Luis Cantu)</managingEditor>
-            <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><lastBuildDate>Wed, 09 Apr 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.cantulab.com/categories/publications/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><lastBuildDate>Wed, 09 Apr 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://luiscmicro.github.io/categories/publications/" rel="self" type="application/rss+xml" /><item>
     <title>Curriculum Vitae</title>
-    <link>https://www.cantulab.com/cv/</link>
+    <link>https://luiscmicro.github.io/cv/</link>
     <pubDate>Wed, 09 Apr 2025 00:00:00 &#43;0000</pubDate>
     <author>Luis Cantu</author>
-    <guid>https://www.cantulab.com/cv/</guid>
+    <guid>https://luiscmicro.github.io/cv/</guid>
     <description><![CDATA[<h1 id="luis-miguel-cantu">Luis Miguel Cantu</h1>
 <p>NSF Graduate Research Fellow — Traxler Lab, UC Berkeley<br>
 📍 <em>Plant &amp; Microbial Biology, University of California, Berkeley</em><br>
@@ -127,10 +127,10 @@ Spanish (native), English (native)</p>]]></description>
 </item>
 <item>
     <title>Publications</title>
-    <link>https://www.cantulab.com/publications/2025-04-09-publications/</link>
+    <link>https://luiscmicro.github.io/publications/2025-04-09-publications/</link>
     <pubDate>Wed, 09 Apr 2025 00:00:00 &#43;0000</pubDate>
     <author>Luis Cantu</author>
-    <guid>https://www.cantulab.com/publications/2025-04-09-publications/</guid>
+    <guid>https://luiscmicro.github.io/publications/2025-04-09-publications/</guid>
     <description><![CDATA[<h3 id="2025">2025</h3>
 <p><strong>Why do filamentous Actinomycetota produce such a vast array of specialized metabolites?</strong></p>
 <p><em>Cantu Morin LM, Dekoninck K, Sridhar V, et al &hellip;</em><br>
