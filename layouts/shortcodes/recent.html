@@ -1,0 +1,46 @@
+{{- $category := .Get "category" -}}
+{{- $count := .Get "count" | default 5 -}}
+
+{{- $pages := where .Site.RegularPages "Params.categories" "intersect" (slice $category) -}}
+{{- $sorted := sort $pages "Params.order" "asc" -}}
+
+<div class="article__container">
+{{- range $i, $page := first $count $sorted }}
+
+  {{- $direction := "row" -}}
+  {{- if mod $i 2 }}
+    {{- $direction = "row-reverse" -}}
+  {{- end }}
+
+  <article class="article__item"
+  style="display: flex; flex-direction: {{ $direction }}; gap: 1rem; align-items: center; margin-bottom: 2rem;">
+  
+    {{- with $page.Params.featured }}
+      <div class="article__cover" style="flex: 0 0 200px; max-width: 200px;">
+        <a href="{{ $page.RelPermalink }}">
+          <img src="{{ . | relURL }}" alt="featured image" style="width: 100%; height: auto; border-radius: 6px;">
+        </a>
+      </div>
+    {{- end }}
+
+    <div class="article__content" style="flex: 1;">
+      <h2 class="article__title" style="margin: 0rem 0;">
+        <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+      </h2>
+
+      {{- with $page.Params.summary }}
+        <p class="article__summary" style="margin-top: 0.5rem;">{{ . }}</p>
+      {{- end }}
+
+      {{- with $page.Params.tags }}
+        <div class="article__tags" style="margin-top: 0.5rem;">
+          {{ range . }}
+            <a class="tag" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+          {{ end }}
+        </div>
+      {{- end }}
+    </div>
+
+  </article>
+{{- end }}
+</div>

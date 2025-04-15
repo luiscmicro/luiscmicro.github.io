@@ -1,0 +1,148 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Publications - Category - LCNotebook</title>
+        <link>https://www.cantulab.com/categories/publications/</link>
+        <description>Publications - Category - LCNotebook</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>luis_cantu@berkeley.edu (Luis Cantu)</managingEditor>
+            <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><lastBuildDate>Wed, 09 Apr 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.cantulab.com/categories/publications/" rel="self" type="application/rss+xml" /><item>
+    <title>Curriculum Vitae</title>
+    <link>https://www.cantulab.com/cv/</link>
+    <pubDate>Wed, 09 Apr 2025 00:00:00 &#43;0000</pubDate>
+    <author>Luis Cantu</author>
+    <guid>https://www.cantulab.com/cv/</guid>
+    <description><![CDATA[<h1 id="luis-miguel-cantu">Luis Miguel Cantu</h1>
+<p>NSF Graduate Research Fellow — Traxler Lab, UC Berkeley<br>
+📍 <em>Plant &amp; Microbial Biology, University of California, Berkeley</em><br>
+📧 <a href="mailto:luis_cantu@berkeley.edu" rel="">luis_cantu@berkeley.edu</a></p>
+<p><em>Actinobacteria | Protein Engineering | Computational Biology | BGC Regulation | LCMS · FPLC · High-Throughput Screening · Software Development</em></p>
+<hr>
+<h1 id="education">Education</h1>
+<p><strong>PhD in Microbiology (In Progress)</strong><br>
+University of California, Berkeley</p>
+<p><strong>B.S. Chemistry (Theoretical and Computational Chemistry), 2019</strong><br>
+University of California, Irvine</p>
+<hr>
+<h1 id="professional-experience">Professional Experience</h1>
+<h3 id="traxler-lab-uc-berkeley--phd-researcher-2019present">Traxler Lab, UC Berkeley — <em>PhD Researcher</em> (2019–Present)</h3>
+<ul>
+<li>Led cross-disciplinary project across 500+ microbial genomes integrating comparative genomics, protein modeling, and functional assays.</li>
+<li>Developed bioinformatics pipelines for ortholog detection, phylogenetics, and AlphaFold modeling.</li>
+<li>Built co-evolutionary modeling tools in R/Python to predict protein-protein interactions.</li>
+<li>Validated predictions through functional biochemical assays.</li>
+<li>Executed RNA prep, transcriptomics, and strain engineering to map regulatory networks.</li>
+<li>Delivered insights into conserved bacterial signaling relevant to drug discovery and synthetic biology.</li>
+</ul>
+<h3 id="mota-bravo-lab-uc-irvine--undergraduate-researcher-20162019">Mota-Bravo Lab, UC Irvine — <em>Undergraduate Researcher</em> (2016–2019)</h3>
+<ul>
+<li>Built software for automated plasmid assembly and functional annotation.</li>
+<li>Isolated and sequenced novel plasmids carrying antibiotic resistance genes from &gt;600 isolates.</li>
+<li>Investigated mobile genetic elements mediating siderophore-antibiotic gene co-localization.</li>
+</ul>
+<h3 id="logan-lab-kings-college-london--undergraduate-researcher-summer-2017">Logan Lab, King’s College London — <em>Undergraduate Researcher</em> (Summer 2017)</h3>
+<ul>
+<li>Studied Sonic hedgehog (Shh) gradient in chick limb development via in situ hybridization.</li>
+<li>Identified Smoc1 as a Shh-responsive gene.</li>
+</ul>
+<h3 id="united-states-marine-corps--sergeant-supply-chief-20112014">United States Marine Corps — <em>Sergeant, Supply Chief</em> (2011–2014)</h3>
+<ul>
+<li>Managed largest supply account in MAG–Afghanistan: 2,826 items worth $44.9M.</li>
+<li>Designed recovery program for retrograde of 930 PEIs ($9.1M).</li>
+<li>Provided advanced supply/logistics training to SNCOs and officers.</li>
+</ul>
+<hr>
+<h1 id="publications">Publications</h1>
+<ul>
+<li>
+<p><strong>Cantu Morin LM</strong>, Dekoninck K, Sridhar V, et al. <em>Why do filamentous Actinomycetota produce such a vast array of specialized metabolites?</em><br>
+<em>Annual Review of Microbiology.</em> (In press)</p>
+</li>
+<li>
+<p>Bonet B, Ra Y, <strong>Cantu Morin LM</strong>, et al. (2021).<br>
+<em>The cvn8 Conservon System Is a Global Regulator of Specialized Metabolism in Streptomyces coelicolor during Interspecies Interactions.</em><br>
+<em>mSystems</em>, 6(5), <a href="https://doi.org/10.1128/msystems.00281-21" target="_blank" rel="noopener noreffer ">e00281-21</a></p>
+</li>
+<li>
+<p>Muñoz-Gutiérrez I, <strong>Cantu L</strong>, Shanahan J, et al. (2024).<br>
+<em>Cryptic Environmental Conjugative Plasmid Recruits a Novel Hybrid Transposon Resulting in a New Plasmid with Higher Dispersion Potential.</em><br>
+<em>mSphere</em>, 9(6), <a href="https://doi.org/10.1128/msphere.00252-24" target="_blank" rel="noopener noreffer ">e00252-24</a></p>
+</li>
+</ul>
+<hr>
+<h1 id="teaching-experience">Teaching Experience</h1>
+<ul>
+<li>
+<p><strong>GSI — Spring 2024</strong>, UC Berkeley<br>
+<em>MCELLBI C112L – General Microbiology Lab</em></p>
+</li>
+<li>
+<p><strong>GSI — Spring 2021</strong>, UC Berkeley<br>
+<em>PLANTBI 40 – The (Secret) Life of Plants</em></p>
+</li>
+<li>
+<p><strong>Mentor – Feb 2020</strong><br>
+<em>Be A Scientist (CRS)</em></p>
+</li>
+</ul>
+<hr>
+<h1 id="awards">Awards</h1>
+<ul>
+<li>2023  GRC CSURM Fellowship</li>
+<li>2020  NSF Graduate Research Fellowship</li>
+<li>2019 	AAAS best student e-poster presentation in Medicine and Public Health</li>
+<li>2018 	UCI Dean’s Honor List</li>
+<li>2017 	UCI Dean’s Honor List</li>
+<li>2017 	Maximizing Access to Research Careers NIH Grant</li>
+<li>2017 	Minority Health and Health Disparities International Research Training NIH Grant.</li>
+<li>2016 	ABRCMS Best Poster Presenter Award in Microbiology</li>
+<li>2016 	Initiative for Maximizing Student Development NIH Grant MBRS</li>
+<li>2016 	Berniece and “Bud” Fricker Memorial Scholarship</li>
+<li>2016 	Charles A. Lipot Memorial Scholarship</li>
+<li>2015 	Orange Coast College President&rsquo;s Honor List</li>
+<li>2014	Orange Coast College Dean&rsquo;s Honor List</li>
+<li>2014 	Navy Achievement Medal. For retrograde operations in Afghanistan, transported and recycled $11M in equipment</li>
+<li>2012 	Navy Meritorious Unit Commendation for participation in operation Tomodachi in support of disaster relief following the 2011 tsunami in Japan</li>
+</ul>
+<hr>
+<h1 id="poster-presentations">Poster Presentations</h1>
+<ul>
+<li>2025 20th International Symposium on the Biology of Actinomycetes, Egmond aan Zee, the Netherlands</li>
+<li>2023 GRC Bacterial Cell Biology and Development, Manchester, NH</li>
+<li>2022 19th International Symposium on the Biology of Actinomycetes, Toronto, ON, Canada</li>
+<li>2019 American Association for the Advancement of Science, Washington, DC</li>
+<li>2018 ABRCMS, Indianapolis, IN</li>
+<li>2018 American Association for the Advancement of Science, Boston, MA</li>
+<li>2017 Sigma Xi Conference, Raleigh, NC</li>
+<li>2016 ABRCMS, Tampa, FL</li>
+</ul>
+<hr>
+<h1 id="technical-skills">Technical Skills</h1>
+<p><strong>Languages:</strong><br>
+Python · R · Java · C++ · C# · .NET</p>
+<p><strong>Laboratory skills:</strong></p>
+<p>LCMS · HPLC · Tandem mass spectrometry · Protein Purification (FPLC) · Enzyme assays (Kinnetics, Pulldowns, Phostag) · Immunoassays (Western) · Molecular assays (DNA, RNA) · Metabolic assays · Cell-based assays</p>
+<p><strong>Tools &amp; Software:</strong><br>
+AutoCAD · ChemDraw · Chimera · PyMOL · Docker · Illustrator · Fusion · Gaussian · TURBOMOLE · MS-DIAL</p>
+<p><strong>Spoken Languages:</strong><br>
+Spanish (native), English (native)</p>]]></description>
+</item>
+<item>
+    <title>Publications</title>
+    <link>https://www.cantulab.com/publications/2025-04-09-publications/</link>
+    <pubDate>Wed, 09 Apr 2025 00:00:00 &#43;0000</pubDate>
+    <author>Luis Cantu</author>
+    <guid>https://www.cantulab.com/publications/2025-04-09-publications/</guid>
+    <description><![CDATA[<h3 id="2025">2025</h3>
+<p><strong>Why do filamentous Actinomycetota produce such a vast array of specialized metabolites?</strong></p>
+<p><em>Cantu Morin LM, Dekoninck K, Sridhar V, et al &hellip;</em><br>
+📄 <em>Annual Review of Microbiology.</em> (In press)</p>
+<h3 id="2024">2024</h3>
+<p><strong>Cryptic environmental conjugative plasmid recruits a novel hybrid transposon resulting in a new plasmid with higher dispersion potential</strong><br>
+<em>I. Muñoz-Gutiérrez, L. Cantu, J. Shanahan, M. Girguis, M. de la Cruz, &hellip;</em><br>
+📄 <em>mSphere</em> 9(6), <a href="https://doi.org/10.1128/msphere.00252-24" target="_blank" rel="noopener noreffer ">e00252-24</a></p>
+<h3 id="2021">2021</h3>
+<p><strong>The cvn8 Conservon System Is a Global Regulator of Specialized Metabolism in <em>Streptomyces coelicolor</em> during Interspecies Interactions</strong><br>
+<em>B. Bonet, Y. Ra, L.M. Cantu Morin, J. Soto Bustos, J. Livny, M.F. Traxler</em><br>
+📄 <em>mSystems</em> 6(5), <a href="https://doi.org/10.1128/msystems.00281-21" target="_blank" rel="noopener noreffer ">10.1128/msystems.00281-21</a></p>]]></description>
+</item>
+</channel>
+</rss>

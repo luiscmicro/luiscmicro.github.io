@@ -1,0 +1,62 @@
+---
+title: Testing Rmd
+author: Luis Cantu
+date: '2025-04-08'
+slug: []
+categories: []
+tags: []
+subtitle: ''
+lastmod: '2025-04-08T16:47:23-07:00'
+draft: yes
+authorLink: ''
+description: ''
+license: ''
+images: []
+featuredImage: ''
+featuredImagePreview: ''
+hiddenFromHomePage: no
+hiddenFromSearch: no
+twemoji: no
+lightgallery: yes
+ruby: yes
+fraction: yes
+fontawesome: yes
+linkToMarkdown: yes
+rssFullText: no
+toc:
+  enable: yes
+  auto: yes
+code:
+  copy: yes
+  maxShownLines: 50
+math:
+  enable: no
+mapbox: ~
+share:
+  enable: yes
+comment:
+  enable: yes
+library:
+  css: ~
+  js: ~
+seo:
+  images: []
+---
+### Legend
+  1. Ladder
+  2. WT pellet (4 uL)
+  3. WT Sup (4 uL
+  4. WT Wash 2 (4 uL)
+  5. WT MagStrep Elution (20 uL)
+  6. EMPTY
+  7. WT + pL97-ScvnA8 pellet (4 uL)
+  8. WT + pL97-ScvnA8 sup (4 uL)
+  9. WT + pL97-ScvnA8 Wash2 (4 uL)
+  10. WT + pL97-ScvnA8 MagStrep Elution(20 uL)
+  11. Ladder
+```{r}
+fit = lm(dist ~ speed, data = cars)
+b = coef(summary(fit))
+plot(fit)
+```
+<!--more-->

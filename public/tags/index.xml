@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - LCNotebook</title>
+        <link>https://www.cantulab.com/tags/</link>
+        <description>Tags - Tag - LCNotebook</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>luis_cantu@berkeley.edu (Luis Cantu)</managingEditor>
+            <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><lastBuildDate>Tue, 09 May 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.cantulab.com/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Westernblot</title>
+    <link>https://www.cantulab.com/tags/westernblot/</link>
+    <pubDate>Tue, 09 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>Luis Cantu</author>
+    <guid>https://www.cantulab.com/tags/westernblot/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

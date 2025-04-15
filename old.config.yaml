@@ -1,0 +1,319 @@
+baseURL: https://www.cantulab.com
+theme: "LoveIt"
+title: LCNotebook
+defaultContentLanguage: en
+languageCode: en
+languageName: English
+hasCJKLanguage: no
+paginate: 12
+googleAnalytics: ''
+copyright: ''
+enableRobotsTXT: yes
+enableGitInfo: yes
+enableEmoji: yes
+ignoreErrors:
+  - error-remote-getjson
+  - error-missing-instagram-accesstoken
+author:
+  email: 'luis_cantu@berkeley.edu'
+  link: ''
+  name: Luis Cantu
+menu:
+  main:
+    - identifier: about
+      name: About
+      post: ''
+      pre: ''
+      title: 'About'
+      url: /about/
+      weight: 1
+    - identifier: publications
+      name: Publications
+      post: ''
+      pre: ''
+      title: 'Publications'
+      url: /publications/2025-04-09-publications
+      weight: 2
+    - identifier: CV
+      name: CV
+      post: ''
+      pre: ''
+      title: 'CV'
+      url: /cv/
+      weight: 3
+    - identifier: protocols
+      name: Protocols
+      post: ''
+      pre: ''
+      title: ''
+      url: /protocols/
+      weight: 4
+    - identifier: wetwork
+      name: Wetwork
+      post: ''
+      pre: ''
+      title: ''
+      url: /wetwork/
+      weight: 5
+params:
+  analytics:
+    enable: no
+    fathom:
+      id: ''
+      server: ''
+    google:
+      anonymizeIP: yes
+      id: ''
+    plausible:
+      dataDomain: ''
+    yandexMetrica:
+      id: ''
+  app:
+    iconColor: '#5bbad5'
+    noFavicon: no
+    svgFavicon: ''
+    themeColor: '#ffffff'
+    tileColor: '#da532c'
+    title: Luis M. Cantu, PhD Candidate
+  cdn:
+    data: jsdelivr.yml
+  compatibility:
+    objectFit: no
+    polyfill: no
+  cookieconsent:
+    content:
+      dismiss: ''
+      link: ''
+      message: ''
+    enable: no
+  dateFormat: '2006-01-02'
+  defaultTheme: auto
+  description: Hugo theme - LoveIt
+  fingerprint: ''
+  footer:
+    author: yes
+    copyright: yes
+    custom: ''
+    enable: yes
+    hugo: yes
+    icp: ''
+    license: <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/"
+      target="_blank">CC BY-NC 4.0</a>
+    since: 2019
+  gitRepo: https://github.com/dillonzq/LoveIt
+  header:
+    desktopMode: fixed
+    mobileMode: auto
+    title:
+      logo: ''
+      name: Luis M. Cantu, PhD Candidate
+      post: ''
+      pre: 
+      typeit: no
+  home:
+    protocols:
+      enable: yes
+      paginate: 6
+    profile:
+      avatarURL: /images/avatar.png
+      disclaimer: 'Computational Biology | Protein Engineering | Analytical Chemistry'
+      enable: yes
+      gravatarEmail: ''
+      social: yes
+      subtitle: Luis M. Cantu, PhD
+      title: ''
+      typeit: no
+    rss: 10
+  images: /logo.png
+  list:
+    dateFormat: 01-02
+    paginate: 20
+    rss: 10
+  page:
+    code:
+      copy: yes
+      maxShownLines: 50
+    comment:
+      commento:
+        enable: no
+      disqus:
+        enable: no
+        shortname: ''
+      enable: yes
+      giscus:
+        category: Announcements
+        categoryId: ''
+        darkTheme: dark
+        emitMetadata: '0'
+        enable: no
+        inputPosition: bottom
+        lang: ''
+        lazyLoading: no
+        lightTheme: light
+        mapping: pathname
+        reactionsEnabled: '1'
+        repo: ''
+        repoId: ''
+      utterances:
+        darkTheme: github-dark
+        enable: no
+        issueTerm: pathname
+        label: ''
+        lightTheme: github-light
+        repo: ''
+    fontawesome: yes
+    fraction: yes
+    hiddenFromHomePage: no
+    hiddenFromSearch: no
+    library:
+      css: {}
+      js: {}
+    lightgallery: no
+    linkToMarkdown: yes
+    mapbox:
+      accessToken: pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ
+      darkStyle: mapbox://styles/mapbox/dark-v10?optimize=true
+      fullscreen: yes
+      geolocate: yes
+      lightStyle: mapbox://styles/mapbox/light-v10?optimize=true
+      navigation: yes
+      scale: yes
+    math:
+      blockLeftDelimiter: ''
+      blockRightDelimiter: ''
+      copyTex: yes
+      enable: no
+      inlineLeftDelimiter: ''
+      inlineRightDelimiter: ''
+      mhchem: yes
+    rssFullText: no
+    ruby: yes
+    seo:
+      images: []
+      publisher:
+        logoUrl: /images/avatar.png
+        name: Luis Cantu
+    share:
+      Baidu: no
+      Blogger: no
+      Buffer: no
+      Evernote: no
+      Facebook: no
+      Flipboard: no
+      HackerNews: no
+      Instapaper: no
+      Line: no
+      Linkedin: no
+      Mix: no
+      Odnoklassniki: no
+      Pinterest: no
+      Pocket: no
+      Reddit: no
+      Skype: no
+      Trello: no
+      Tumblr: no
+      Twitter: no
+      VK: no
+      Weibo: no
+      Whatsapp: no
+      Xing: no
+      enable: no
+    toc:
+      auto: yes
+      enable: yes
+      keepStatic: no
+    twemoji: no
+  search:
+    absoluteURL: no
+    algolia:
+      appID: ''
+      index: ''
+      searchKey: ''
+    contentLength: 4000
+    enable: yes
+    highlightTag: em
+    maxResultLength: 10
+    placeholder: ''
+    snippetLength: 30
+    type: algolia
+  section:
+    dateFormat: 01-02
+    paginate: 20
+    rss: 10
+  seo:
+    image: /images/Apple-Devices-Preview.png
+    thumbnailUrl: /images/screenshot.png
+  social:
+    Email: luis_cantu@berkeley.edu
+    GitHub: luiscmicro
+    RSS: no
+    Twitter: s_coelicolor
+  title: 
+  typeit:
+    cursorChar: '|'
+    cursorSpeed: 1000
+    duration: -1
+    speed: 100
+  verification:
+    baidu: ''
+    bing: ''
+    google: ''
+    pinterest: ''
+    yandex: ''
+markup:
+  goldmark:
+    extensions:
+      definitionList: yes
+      footnote: yes
+      linkify: yes
+      strikethrough: yes
+      table: yes
+      taskList: yes
+      typographer: yes
+    renderer:
+      unsafe: yes
+  highlight:
+    codeFences: yes
+    guessSyntax: yes
+    lineNos: yes
+    lineNumbersInTable: yes
+    noClasses: no
+  tableOfContents:
+    endLevel: 6
+    startLevel: 2
+sitemap:
+  changefreq: weekly
+  filename: sitemap.xml
+  priority: 0.5
+Permalinks:
+  posts: :filename
+privacy:
+  googleAnalytics: {}
+  twitter:
+    enableDNT: yes
+  youtube:
+    privacyEnhanced: yes
+mediaTypes:
+  text/plain:
+    suffixes: md
+outputFormats:
+  MarkDown:
+    isHTML: no
+    isPlainText: yes
+    mediaType: text/plain
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+  page:
+    - HTML
+    - MarkDown
+  section:
+    - HTML
+    - RSS
+  taxonomy:
+    - HTML
+    - RSS
+  taxonomyTerm: HTML
+
