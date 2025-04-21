@@ -3,7 +3,7 @@ title: Using His-FPLC
 author: R package build
 date: '2023-03-10'
 slug: []
-categories: []
+categories: ["Protein purification"]
 tags: []
 subtitle: ''
 lastmod: '2023-03-10T11:37:16-08:00'

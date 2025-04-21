@@ -1,47 +1,5 @@
----
-title: Colony PCR
-author: Luis Cantu
-date: '2025-04-15'
-slug: colony-pcr
-categories: ["Molecular Biology"]
-tags: []
-subtitle: ''
-lastmod: '2025-04-15T16:24:09-07:00'
-authorLink: ''
-description: ''
-license: ''
-images: []
-featuredImage: ''
-featuredImagePreview: ''
-hiddenFromHomePage: no
-hiddenFromSearch: no
-twemoji: no
-lightgallery: yes
-ruby: yes
-fraction: yes
-fontawesome: yes
-linkToMarkdown: yes
-rssFullText: no
-toc:
-  enable: yes
-  auto: yes
-  keepStatic: no
-code:
-  copy: yes
-  maxShownLines: 50
-math:
-  enable: no
-mapbox: ~
-share:
-  enable: yes
-comment:
-  enable: no
-library:
-  css: ~
-  js: ~
-seo:
-  images: []
----
+# Colony PCR
+
 ## Colony PCR Protocol
 
 1. Add **50 µL** of filtered dH₂O to a PCR tube.  
@@ -66,3 +24,4 @@ seo:
 - Select annealing time according to the formula:  
   **20–30 seconds per 1000 bp**
 <!--more-->
+

@@ -1,47 +1,5 @@
----
-title: Michelis Menten with Kinase-Glo Assay
-author: Package Build
-date: '2025-04-18'
-slug: michelis-menten-with-kinase-glo-assay
-categories: ["Biochemistry"]
-tags: []
-subtitle: ''
-lastmod: '2025-04-18T14:27:44-07:00'
-authorLink: ''
-description: ''
-license: ''
-images: []
-featuredImage: ''
-featuredImagePreview: ''
-hiddenFromHomePage: no
-hiddenFromSearch: no
-twemoji: no
-lightgallery: yes
-ruby: yes
-fraction: yes
-fontawesome: yes
-linkToMarkdown: yes
-rssFullText: no
-toc:
-  enable: yes
-  auto: yes
-  keepStatic: no
-code:
-  copy: yes
-  maxShownLines: 50
-math:
-  enable: no
-mapbox: ~
-share:
-  enable: yes
-comment:
-  enable: no
-library:
-  css: ~
-  js: ~
-seo:
-  images: []
----
+# Michelis Menten with Kinase-Glo Assay
+
 
 
 Protocol for Measuring ATPase with Kinase-Glo Assay.
@@ -122,3 +80,4 @@ To convert luminescence to ATP concentration, prepare a standard curve in parall
 
 
 <!--more-->
+

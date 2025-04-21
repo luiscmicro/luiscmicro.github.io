@@ -1,47 +1,5 @@
----
-title: Conjugation in Streptomyces coelicolor
-author: Luis Cantu
-date: '2025-04-15'
-slug: conjugation-in-streptomyces-coelicolor
-categories: ["Microbial Techniques"]
-tags: []
-subtitle: ''
-lastmod: '2025-04-15T16:26:51-07:00'
-authorLink: ''
-description: ''
-license: ''
-images: []
-featuredImage: ''
-featuredImagePreview: ''
-hiddenFromHomePage: no
-hiddenFromSearch: no
-twemoji: no
-lightgallery: yes
-ruby: yes
-fraction: yes
-fontawesome: yes
-linkToMarkdown: yes
-rssFullText: no
-toc:
-  enable: yes
-  auto: yes
-  keepStatic: no
-code:
-  copy: yes
-  maxShownLines: 50
-math:
-  enable: no
-mapbox: ~
-share:
-  enable: yes
-comment:
-  enable: no
-library:
-  css: ~
-  js: ~
-seo:
-  images: []
----
+# Conjugation in Streptomyces coelicolor
+
 ## Streptomyces Conjugation Protocol 
 ***Updated 23 Nov, 2023***
 
@@ -96,3 +54,4 @@ seo:
 
 > 💡 *This method allows efficient transfer of cosmids into* Streptomyces *by interspecies conjugation using methylation-deficient* E. coli *donors.*
 <!--more-->
+

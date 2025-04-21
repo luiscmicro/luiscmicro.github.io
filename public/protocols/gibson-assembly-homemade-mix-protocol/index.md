@@ -1,47 +1,5 @@
----
-title: Gibson Assembly Homemade mix Protocol
-author: Luis Cantu
-date: '2025-04-15'
-slug: gibson-assembly-homemade-mix-protocol
-categories: ["Molecular Biology"]
-tags: []
-subtitle: ''
-lastmod: '2025-04-15T16:34:03-07:00'
-authorLink: ''
-description: ''
-license: ''
-images: []
-featuredImage: ''
-featuredImagePreview: ''
-hiddenFromHomePage: no
-hiddenFromSearch: no
-twemoji: no
-lightgallery: yes
-ruby: yes
-fraction: yes
-fontawesome: yes
-linkToMarkdown: yes
-rssFullText: no
-toc:
-  enable: yes
-  auto: yes
-  keepStatic: no
-code:
-  copy: yes
-  maxShownLines: 50
-math:
-  enable: no
-mapbox: ~
-share:
-  enable: yes
-comment:
-  enable: no
-library:
-  css: ~
-  js: ~
-seo:
-  images: []
----
+# Gibson Assembly Homemade mix Protocol
+
 ## Overview
 
 This protocol outlines how to prepare a homemade Gibson Assembly mix and carry out the reaction for cloning. It includes buffer preparation, enzyme mix, reaction setup, and transformation tips.
@@ -120,3 +78,4 @@ Incubate at **50 °C for 15 min to 2 hours** (usually 2 hours).
 
 > ✅ Homemade Gibson is cost-effective and reliable for many cloning workflows, especially in high-throughput settings.
 <!--more-->
+

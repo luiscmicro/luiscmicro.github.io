@@ -3,7 +3,7 @@ title: Western Blotting
 author: Luis Cantu
 date: '2023-01-11'
 slug: []
-categories: []
+categories: ["Biochemistry"]
 tags: []
 subtitle: ''
 lastmod: '2023-01-11T14:40:46-08:00'

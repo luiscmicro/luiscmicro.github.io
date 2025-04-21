@@ -3,7 +3,7 @@ title: His-tagged DynaBeads Protein Pulldown Protocol (Small batch)
 author: Luis Cantu
 date: '2023-01-09'
 slug: []
-categories: []
+categories: ["Biochemistry"]
 tags: []
 subtitle: ''
 lastmod: '2023-01-09T17:37:18-08:00'

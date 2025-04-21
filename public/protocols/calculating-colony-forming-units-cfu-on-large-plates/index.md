@@ -1,47 +1,5 @@
----
-title: Estimating Colony Forming Units (CFU) on a large plate.
-author: Luis Cantu
-date: '2025-04-17'
-slug: calculating-colony-forming-units-cfu-on-large-plates
-categories: ["Microbial Techniques"]
-tags: []
-subtitle: ''
-lastmod: '2025-04-17T13:12:42-07:00'
-authorLink: ''
-description: ''
-license: ''
-images: []
-featuredImage: ''
-featuredImagePreview: ''
-hiddenFromHomePage: no
-hiddenFromSearch: no
-twemoji: no
-lightgallery: yes
-ruby: yes
-fraction: yes
-fontawesome: yes
-linkToMarkdown: yes
-rssFullText: no
-toc:
-  enable: yes
-  auto: yes
-  keepStatic: no
-code:
-  copy: yes
-  maxShownLines: 50
-math:
-  enable: yes
-mapbox: ~
-share:
-  enable: yes
-comment:
-  enable: no
-library:
-  css: ~
-  js: ~
-seo:
-  images: []
----
+# Estimating Colony Forming Units (CFU) on a large plate.
+
 
 ## 📘 Overview
 
@@ -121,3 +79,4 @@ $$
 - Plates with <30 or >300 colonies are generally not used for accurate quantification in full CFU counting methods—but this method is for quick estimation.
 
 <!--more-->
+

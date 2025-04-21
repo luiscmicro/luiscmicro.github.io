@@ -1,0 +1,29 @@
+{{ define "content" }}
+  <div class="page archive">
+    <h2>Protocols</h2>
+    <p style="color: #666; font-size: 0.95em;">{{ .Description }}</p>
+    {{/* Group pages by category */}}
+    {{ $grouped := dict }}
+    {{ range .Pages }}
+      {{ $page := . }}
+      {{ range .Params.categories }}
+        {{ $existing := index $grouped . | default (slice) }}
+        {{ $grouped = merge $grouped (dict . (append $existing (slice $page))) }}
+      {{ end }}
+    {{ end }}
+
+    {{/* Render each group */}}
+    {{ range $category, $pages := $grouped }}
+      <h3>{{ $category }}</h3>
+      <ul>
+        {{ range $pages }}
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <span style="color: #888; font-size: 0.9em;"> - {{ .Date.Format "01-02-06" }}</span>
+          </li>
+
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
+{{ end }}

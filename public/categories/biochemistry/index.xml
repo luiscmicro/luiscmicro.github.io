@@ -1,0 +1,198 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Biochemistry - Category - Luis Cantu</title>
+        <link>https://luiscmicro.github.io/categories/biochemistry/</link>
+        <description>Biochemistry - Category - Luis Cantu</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>luis_cantu@berkeley.edu (Luis Cantu)</managingEditor>
+            <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><lastBuildDate>Fri, 18 Apr 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://luiscmicro.github.io/categories/biochemistry/" rel="self" type="application/rss+xml" /><item>
+    <title>Michelis Menten with Kinase-Glo Assay</title>
+    <link>https://luiscmicro.github.io/protocols/michelis-menten-with-kinase-glo-assay/</link>
+    <pubDate>Fri, 18 Apr 2025 00:00:00 &#43;0000</pubDate>
+    <author>Package Build</author>
+    <guid>https://luiscmicro.github.io/protocols/michelis-menten-with-kinase-glo-assay/</guid>
+    <description><![CDATA[<p>Protocol for Measuring ATPase with Kinase-Glo Assay.
+We will hold the protein concentration constant and increase concentrations of substrate (ATP) and incubate for 30 minutes. We can then calculate Km and Vmax using Michaelis-Menten kinetics.</p>
+<h2 id="stage-1-prepare-buffer-mix">Stage 1. Prepare Buffer Mix</h2>
+<p>Prepare an excess of Buffer Mix (Tris + 100 mM MgCl₂) to make all dilutions and the ATP Buffer.<br>
+5 mL of Buffer Mix should be enough for one plate. Use a sterile 10 mL tube.</p>
+<ul>
+<li>400 µL 1.25 mM MgCl₂</li>
+<li>4600 µL Tris Buffer (pH 8)</li>
+</ul>
+<hr>
+<h2 id="stage-2-prepare-protein--buffer-mix">Stage 2. Prepare Protein + Buffer Mix</h2>
+<p>Use the Protein Calculation Spreadsheet to calculate the volume of protein needed.<br>
+We use <strong>0.5 µM protein concentration</strong> diluted in Tris + MgCl₂ buffer.<br>
+This is the <strong>2x concentration buffer</strong>.</p>
+<blockquote>
+<p>For example:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Vial</th>
+          <th>Protein</th>
+          <th>Final Concentration (µM)</th>
+          <th>Final Volume (µL)</th>
+          <th>Protein (µL)</th>
+          <th>Concentration (µM)</th>
+          <th>Water (µL)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>A8-A</td>
+          <td>1.5</td>
+          <td>80</td>
+          <td>7.1</td>
+          <td>17</td>
+          <td>72.9</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>H183A</td>
+          <td>1.5</td>
+          <td>80</td>
+          <td>4.2</td>
+          <td>28.2</td>
+          <td>75.8</td>
+      </tr>
+  </tbody>
+</table></blockquote>
+<hr>
+<h2 id="stage-3-prepare-atp-mix">Stage 3. Prepare ATP Mix</h2>
+<p>Prepare <strong>400 µL of 800 µM ATP Vial</strong>:</p>
+<ul>
+<li>396.8 µL of Buffer Mix (from Stage 1)</li>
+<li>3.2 µL of 100 mM ATP</li>
+</ul>
+<hr>
+<h2 id="stage-4-prepare-plate-with-atp-serial-dilutions">Stage 4. Prepare Plate with ATP Serial Dilutions</h2>
+<p>Make serial dilutions of the ATP Vial (Stage 3) using Eppendorf tubes labeled 1–8.</p>
+<ol>
+<li>Dispense 200 µL of Buffer Mix (from Stage 1) into tubes labeled 2–8.</li>
+<li>Dispense 400 µL of ATP Vial (from Stage 3) into tube 1.</li>
+<li>Make serial dilutions by pipetting 200 µL from tube 1 to 2, then tube 2 to 3, and so on through tube 8.</li>
+</ol>
+<hr>
+<h2 id="stage-5-prepare-pcr-tubes-for-kinase-reaction">Stage 5. Prepare PCR Tubes for Kinase Reaction</h2>
+<ol>
+<li>Dispense <strong>9 µL</strong> of each serial dilution (from Stage 4) into new PCR tubes labeled <code>v1-1</code> to <code>v1-8</code>.</li>
+<li>Dispense <strong>9 µL</strong> of the appropriate protein mix (e.g., vial 1) into each tube.</li>
+<li>Repeat for each protein variant (e.g., vial 3).</li>
+<li>Incubate reaction strips for <strong>30 minutes at 30°C</strong>.</li>
+</ol>
+<hr>
+<h2 id="stage-6-prepare-atp-standard-curve-optional-but-recommended">Stage 6. Prepare ATP Standard Curve (Optional but Recommended)</h2>
+<p>To convert luminescence to ATP concentration, prepare a standard curve in parallel:</p>
+<ol>
+<li>Start with <strong>600 µM ATP stock solution</strong>.</li>
+<li>Prepare 1:2 serial dilutions down to 0 µM using Buffer Mix (e.g., 600, 300, 150, 75, 37.5, 18.75, 9.38, 0 µM).</li>
+<li>Dispense <strong>5 µL</strong> of each dilution into a white plate well.</li>
+<li>Add <strong>5 µL</strong> of Kinase-Glo reagent to each well.</li>
+<li>Let sit at <strong>room temperature for 10 minutes</strong>.</li>
+<li>Measure luminescence and use to generate a standard curve.</li>
+</ol>
+<hr>
+<h2 id="stage-7-measurement">Stage 7. Measurement</h2>
+<ol>
+<li>Dispense <strong>5 µL</strong> of each kinase reaction (from Stage 5) into a white 384-well plate.</li>
+<li>Add <strong>5 µL</strong> of Kinase-Glo reagent to each well.</li>
+<li>Let the plate sit for <strong>10 minutes at room temperature</strong> (preferably with light shaking).</li>
+<li>Read luminescence. If standard curve is available, convert values to ATP concentration.</li>
+</ol>]]></description>
+</item>
+<item>
+    <title>Western Blotting</title>
+    <link>https://luiscmicro.github.io/protocols/2023-01-11-western-blotting/</link>
+    <pubDate>Wed, 11 Jan 2023 00:00:00 &#43;0000</pubDate>
+    <author>Luis Cantu</author>
+    <guid>https://luiscmicro.github.io/protocols/2023-01-11-western-blotting/</guid>
+    <description><![CDATA[<p>This protocol is adapted from the BioRad User Protocol TB446 Rev. A 0905 for their SDS-PAGE Strep-Tag II Fusion products. The protocol is for the transfer and detection of proteins on PVDF and nitrocellulose membranes. However, different membranes might have different blocking conditions.</p>
+<h2 id="buffer-preparation">Buffer preparation</h2>
+<p>The following buffer preparations are required for one small blot. You might need to prepare larger volumes.</p>
+<ol>
+<li>Prepare 300 mL 1x PBS (137 mM NaCl, 10 mM Na2HPO4, 2.7 mM KCl, 1.8 mM KH2PO4, pH 7).</li>
+<li>Prepare 50 mL blocking solution by mixing 2.5g of BSA and 250 uL TWEEN-20 in 50 mL PBS (5% BSA, 0.5% TWEEN-20 in 1x PBS).</li>
+<li>Prepare 150 mL PBST by mixing 30 mL of blocking solution with 120 mL of PBS (final concentrations are 1% BSA, 0.1% v/v TWEEN-20 in 1x PBS).</li>
+<li>Prepare 1 L of Running Buffer by diluting the 10x Tris/Glycine/SDS solution to 1x (Final 1x concentration of Running Buffer is).</li>
+<li>Prepare Western Transfer Buffer (192 mM glycine, 25 mM Trisbase, 20% methanol, pH 8.0)
+6- Have methanol available for activating membrane if needed.</li>
+</ol>
+<h2 id="protocol">Protocol</h2>
+<ol>
+<li>
+<p>Run 10 uL samples on SDS-Page gel (we use miniProtean TGX). Voltage is best at constant 195 V for about 1hr. You need to have New Running Buffer for better results.</p>
+</li>
+<li>
+<p>Electrophoretically transfer proteins to nitrocellulose or other membrane. Our device supports TURBO transfer for 3 minutes per gel, but best results are achieved on our custom protocol of 25V limit, 2.5A constant and 7 minute transfer for 1 gel or 14 minutes for two gels.
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Monitor the current/voltage on the transferring device. <i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">You need to have at least 10 minutes of 0.5 A with a limit of 25V. If the current is too low, you should increase the time to ensure complete transfer of the proteins. Similarly, if the current is higher than 0.5 you should decrease the time of transfer to 7 minutes or as little as 3 minutes depending on the current.</div>
+        </div>
+    </div></p>
+</li>
+<li>
+<p>Wash emmbrane 2 times, each for 10 minutes with 15 mL 1x PBS.
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Tip about membrane size<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Before you transfer the membrane to the washing tray, cut the membrane to the size of the PAGE gel using a blade. This is to ensure you fit the membrane in the small tray and save some antibody since the volumes are smaller.</div>
+        </div>
+    </div></p>
+</li>
+<li>
+<p>Incubate membrane in the remaining 20 mL blocking solution for 2.5 hr at room temperature, or overnight at 4 C with gentle agitation.
+Blocking overnight may give a better signal-to-noise ratio.</p>
+</li>
+<li>
+<p>Wash membrane 3 times, each for 5 minutes, with 15 mL PBST.</p>
+</li>
+<li>
+<p>Prepare Primary Antibody solution adding <strong>3.75 uL of His Antibody</strong> in <strong>15 mL</strong> PBST (1:4000 dilution).</p>
+</li>
+<li>
+<p>Add 15 mL diluted Primary antibody solution and <strong>incubate for 60 minutes</strong> at room temperature with gentle agitation.</p>
+</li>
+<li>
+<p>Wash membrane in PBST 3 times for 5 minutes each with 20 mL PBST.</p>
+</li>
+<li>
+<p>Prepare HRP Conjugate Antibody solution adding <strong>3.75 uL of His-HRP conjugate Antibody</strong> in <strong>15 mL</strong> PBST (1:4000 dilution).</p>
+</li>
+<li>
+<p>Add 15 mL diluted HRP Conjugate antibody solution and <strong>incubate for 60 minutes</strong> at room temperature with gentle agitation.</p>
+</li>
+<li>
+<p>Wash membrane 2 times, each for 10 minutes with 20 mL PBST.</p>
+</li>
+<li>
+<p>Wash membrane 2 times, each for 10 minutes with 20 mL PBS.</p>
+</li>
+</ol>
+<h2 id="visualizing-blot-membrane">Visualizing Blot membrane</h2>
+<ol>
+<li>Drain the membrane by touching the corner of a dry paper towel in a 45 degree angle.</li>
+<li>Place the membrane on the clean tray cover.</li>
+<li>Prepare SuperSignal HRP Substrate by mixing 1 mL of 2x Luminol/Enhancer and 1 mL of 2x Stable Peroxide Solution.</li>
+<li>Wet the entire surface with SuperSignal HRP Substrate quickly . Incubate the blot in the substrate for 2 minutes.</li>
+<li>Remove membrane from substrate and drain excess membrane by touching paper towel.</li>
+<li>Place membrane in plastic development folder to remove any bubbles.</li>
+<li>Use the Chemi high sensitivity setting on the Visualizer camera.</li>
+</ol>]]></description>
+</item>
+<item>
+    <title>His-tagged DynaBeads Protein Pulldown Protocol (Small batch)</title>
+    <link>https://luiscmicro.github.io/protocols/2023-01-09-protein-pulldown-using-dynabeads/</link>
+    <pubDate>Mon, 09 Jan 2023 00:00:00 &#43;0000</pubDate>
+    <author>Luis Cantu</author>
+    <guid>https://luiscmicro.github.io/protocols/2023-01-09-protein-pulldown-using-dynabeads/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>
