@@ -13,8 +13,8 @@ license: ''
 images: []
 featuredImage: ''
 featuredImagePreview: ''
-hiddenFromHomePage: no
-hiddenFromSearch: no
+hiddenFromHomePage: yes
+hiddenFromSearch: yes
 twemoji: no
 lightgallery: yes
 ruby: yes
@@ -194,7 +194,7 @@ Unsupervised segmentation of MALDI-IMS data using the Cardinal package reveals c
 
 The spatial shrunken centroid approach not only identifies spatially enriched ions, but also associates them with specific biological regions. The t-statistic analysis shows that the region corresponding to interacting *S. coelicolor* exhibits more metabolite peaks than the non-interacting region, suggesting a metabolic response to the presence of AA4. Together, this workflow provides a robust framework for dissecting the spatial logic of microbial chemical interactions.
 
-## References
+## 6. References
 
 1. Bemis, K. A., Foell, M. C., Guo, D., Lakkimsetty, S. S., & Vitek, O. (2023). *Cardinal v.3: a versatile open-source software for mass spectrometry imaging analysis.* *Nature Methods, 20*(12), 1883–1886. https://doi.org/10.1038/s41592-023-02070-z
 
