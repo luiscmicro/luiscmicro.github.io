@@ -4,7 +4,135 @@
         <link>https://luiscmicro.github.io/categories/biochemistry/</link>
         <description>Biochemistry - Category - Luis Cantu</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>luis_cantu@berkeley.edu (Luis Cantu)</managingEditor>
-            <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><lastBuildDate>Fri, 18 Apr 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://luiscmicro.github.io/categories/biochemistry/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><lastBuildDate>Wed, 23 Apr 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://luiscmicro.github.io/categories/biochemistry/" rel="self" type="application/rss+xml" /><item>
+    <title>Protocol for IC50 using Kinase-Glo assay</title>
+    <link>https://luiscmicro.github.io/protocols/protocol-for-ic50-using-kinase-glo-assay/</link>
+    <pubDate>Wed, 23 Apr 2025 00:00:00 &#43;0000</pubDate>
+    <author>Luis Cantu</author>
+    <guid>https://luiscmicro.github.io/protocols/protocol-for-ic50-using-kinase-glo-assay/</guid>
+    <description><![CDATA[<h1 id="protocol-ic-measurement-using-kinase-glo-assay">Protocol: IC₅₀ Measurement Using Kinase-Glo Assay</h1>
+<p>This protocol outlines how to measure IC₅₀ for kinase reactions using the Kinase-Glo assay system.</p>
+<hr>
+<h2 id="stage-1-prepare-buffer-mix">Stage 1: Prepare Buffer Mix</h2>
+<p>Prepare an excess of buffer (Tris + 100 mM MgCl₂) for all dilutions and ATP mixes. One 10 mL preparation is sufficient for a single plate.</p>
+<p><strong>Buffer Mix (5 mL total):</strong></p>
+<ul>
+<li>400 µL of 1.25 M MgCl₂</li>
+<li>4600 µL of Tris Buffer (pH 8)</li>
+</ul>
+<hr>
+<h2 id="stage-2-prepare-atp-mix">Stage 2: Prepare ATP Mix</h2>
+<h3 id="a-1500-µm-atp-1000-µl-total">A. 1500 µM ATP (1000 µL total)</h3>
+<ul>
+<li>985 µL Buffer Mix (from Stage 1)</li>
+<li>15 µL of 100 mM ATP</li>
+</ul>
+<h3 id="b-800-µm-atp-ladder-400-µl-total">B. 800 µM ATP Ladder (400 µL total)</h3>
+<ul>
+<li>396.8 µL Buffer Mix (from Stage 1)</li>
+<li>3.2 µL of 100 mM ATP</li>
+</ul>
+<hr>
+<h2 id="stage-3-prepare-protein--buffer-mix">Stage 3: Prepare Protein + Buffer Mix</h2>
+<p>Use the Protein Calculation Spreadsheet to calculate required volumes. Final concentration of protein in reaction should be 0.5 µM (use 2× protein stock in Tris + MgCl₂ buffer).</p>
+<p><strong>Example Preparation (Fourth Try - 01/23/24):</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>Vial</th>
+          <th>Protein</th>
+          <th>Final Conc. (µM)</th>
+          <th>Final Vol (µL)</th>
+          <th>Protein Vol (µL)</th>
+          <th>Stock Conc. (µM)</th>
+          <th>H₂O (µL)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>A8-A</td>
+          <td>1.5</td>
+          <td>80</td>
+          <td>38.5</td>
+          <td>3.12</td>
+          <td>41.5</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>A8-A</td>
+          <td>1.5</td>
+          <td>80</td>
+          <td>38.5</td>
+          <td>3.12</td>
+          <td>41.5</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>H183A</td>
+          <td>1.0</td>
+          <td>80</td>
+          <td>2.8</td>
+          <td>28.2</td>
+          <td>77.2</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="stage-4-prepare-inhibitory-molecule">Stage 4: Prepare Inhibitory Molecule</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Vial</th>
+          <th>Molecule</th>
+          <th>Final Conc. (µM)</th>
+          <th>Final Vol (µL)</th>
+          <th>Stock Vol (µL)</th>
+          <th>Stock Conc. (µM)</th>
+          <th>H₂O (µL)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>4</td>
+          <td>F8</td>
+          <td>3.0</td>
+          <td>80</td>
+          <td>4.0</td>
+          <td>60</td>
+          <td>76.0</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="stage-5-serial-dilution-of-inhibitory-molecule">Stage 5: Serial Dilution of Inhibitory Molecule</h2>
+<ol>
+<li>Dispense <strong>10 µL Buffer Mix (no ATP)</strong> into PCR tubes labeled 2–8.</li>
+<li>Dispense <strong>20 µL of inhibitory molecule</strong> (from Stage 4) into tube 1.</li>
+<li>Perform <strong>serial 1:2 dilutions</strong> by transferring 10 µL sequentially from tubes 1 → 2 → 3 → &hellip; → 8.</li>
+</ol>
+<hr>
+<h2 id="stage-6-set-up-kinase-reactions-in-pcr-tubes">Stage 6: Set Up Kinase Reactions in PCR Tubes</h2>
+<ol>
+<li>Dispense <strong>9 µL</strong> from each serial dilution (Stage 5) into new PCR tubes labeled <code>v1-1</code> to <code>v1-8</code>.</li>
+<li>Add <strong>9 µL protein mix</strong> (from Stage 3) into each tube.</li>
+<li>For controls (no inhibitor), use <strong>9 µL Buffer Mix</strong> instead of serial dilution.</li>
+<li>Add <strong>9 µL of ATP Mix</strong> (from Stage 2) to all tubes.</li>
+<li>Incubate for <strong>30 minutes at 30°C</strong>.</li>
+</ol>
+<hr>
+<h2 id="stage-7-kinase-glo-measurement">Stage 7: Kinase-Glo Measurement</h2>
+<ol>
+<li>Dispense <strong>5 µL</strong> of each reaction into a white assay plate.</li>
+<li>Add <strong>5 µL Kinase-Glo reagent</strong> to each well.</li>
+<li>Incubate at <strong>room temperature for 10 minutes</strong>.</li>
+<li>Read luminescence.</li>
+</ol>
+<hr>
+<blockquote>
+<p>💡 <em>Ensure all volumes and conditions are adjusted based on your protein stock concentration and assay plate layout.</em></p></blockquote>]]></description>
+</item>
+<item>
     <title>Michelis Menten with Kinase-Glo Assay</title>
     <link>https://luiscmicro.github.io/protocols/michelis-menten-with-kinase-glo-assay/</link>
     <pubDate>Fri, 18 Apr 2025 00:00:00 &#43;0000</pubDate>

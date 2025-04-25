@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Protein Purification - Category - Luis Cantu</title>
+        <link>https://luiscmicro.github.io/categories/protein-purification/</link>
+        <description>Protein Purification - Category - Luis Cantu</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>luis_cantu@berkeley.edu (Luis Cantu)</managingEditor>
+            <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><lastBuildDate>Fri, 10 Mar 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://luiscmicro.github.io/categories/protein-purification/" rel="self" type="application/rss+xml" /><item>
+    <title>Using His-FPLC</title>
+    <link>https://luiscmicro.github.io/protocols/2023-03-10-using-his-fplc/</link>
+    <pubDate>Fri, 10 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>R package build</author>
+    <guid>https://luiscmicro.github.io/protocols/2023-03-10-using-his-fplc/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

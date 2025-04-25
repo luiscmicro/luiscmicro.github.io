@@ -4,9 +4,30 @@
         <link>https://luiscmicro.github.io/</link>
         <description>CV &amp; Research Interests by Luis Cantu, PhD</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>luis_cantu@berkeley.edu (Luis Cantu)</managingEditor>
-            <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><lastBuildDate>Fri, 18 Apr 2025 00:00:00 &#43;0000</lastBuildDate>
+            <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><lastBuildDate>Thu, 24 Apr 2025 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="https://luiscmicro.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Segmentation of MALDI-IMS Experiments of Bacterial Interspecies Interactions Using CardinalIMS</title>
+    <link>https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/</link>
+    <pubDate>Thu, 24 Apr 2025 00:00:00 &#43;0000</pubDate>
+    <author>Luis Cantu</author>
+    <guid>https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/</guid>
+    <description><![CDATA[<p>Unsupervised analysis of bacterial interspecies interactions using MALDI-IMS and the Cardinal package in R.</p>
+<!-- more -->
+<h2 id="1-introduction">1. Introduction</h2>
+<p>The goal of this post is to showcase unsupervised analysis of MALDI-IMS experiments to discover chemical diversification during interspecies interactions of actinomycetota. Briefly, the setup involves growing patches of</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-r">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">Cardinal</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">knitr</span><span class="p">)</span></span></span></code></pre></div></div>
+<h2 id="2-growing-cells-and-preparing-samples">2. Growing cells and preparing samples</h2>
+<p>The following procedure was used to prepare samples for MALDI-IMS analysis:</p>]]></description>
+</item>
+<item>
     <title>Analytical Chemistry</title>
     <link>https://luiscmicro.github.io/2025-04-09-analytical-chemistry/</link>
     <pubDate>Wed, 09 Apr 2025 00:00:00 &#43;0000</pubDate>

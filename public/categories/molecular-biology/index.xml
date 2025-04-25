@@ -1,0 +1,200 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Molecular Biology - Category - Luis Cantu</title>
+        <link>https://luiscmicro.github.io/categories/molecular-biology/</link>
+        <description>Molecular Biology - Category - Luis Cantu</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>luis_cantu@berkeley.edu (Luis Cantu)</managingEditor>
+            <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><lastBuildDate>Tue, 15 Apr 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://luiscmicro.github.io/categories/molecular-biology/" rel="self" type="application/rss+xml" /><item>
+    <title>Colony PCR</title>
+    <link>https://luiscmicro.github.io/protocols/colony-pcr/</link>
+    <pubDate>Tue, 15 Apr 2025 00:00:00 &#43;0000</pubDate>
+    <author>Luis Cantu</author>
+    <guid>https://luiscmicro.github.io/protocols/colony-pcr/</guid>
+    <description><![CDATA[<h2 id="colony-pcr-protocol">Colony PCR Protocol</h2>
+<ol>
+<li>Add <strong>50 µL</strong> of filtered dH₂O to a PCR tube.</li>
+<li>Scrape <strong>2 µL loop</strong> of cells from plates and resuspend in the 50 µL dH₂O.</li>
+<li>Grind up the colony using the electric grinder for <strong>30 seconds</strong>.</li>
+<li>Boil at <strong>98°C for 10 minutes</strong> using the thermocycler.</li>
+<li>This will be your <strong>2 µL template</strong> for the PCR reaction.</li>
+<li>Prepare a <strong>Master Mix</strong> PCR solution using the NEB table of ingredients.</li>
+<li>Split your master mix into <strong>19 µL aliquots</strong>.</li>
+<li>Add <strong>2 µL of template</strong> to each aliquot.</li>
+<li>Edit the <code>BB_Q5</code> program in the thermocycler to adjust the <strong>annealing temperature</strong>.</li>
+<li>Edit the <code>BB_Q5</code> program in the thermocycler to adjust the <strong>annealing time</strong>.</li>
+<li>Run the PCR products on a <strong>1% agarose gel</strong>.</li>
+</ol>
+<hr>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>
+<p>Always calculate annealing temperature using the NEB Tm Calculator:<br>
+<a href="http://tmcalculator.neb.com/#!/main" target="_blank" rel="noopener noreffer ">http://tmcalculator.neb.com/#!/main</a></p>
+</li>
+<li>
+<p>Select annealing time according to the formula:<br>
+<strong>20–30 seconds per 1000 bp</strong></p>
+</li>
+</ul>]]></description>
+</item>
+<item>
+    <title>Gibson Assembly Homemade mix Protocol</title>
+    <link>https://luiscmicro.github.io/protocols/gibson-assembly-homemade-mix-protocol/</link>
+    <pubDate>Tue, 15 Apr 2025 00:00:00 &#43;0000</pubDate>
+    <author>Luis Cantu</author>
+    <guid>https://luiscmicro.github.io/protocols/gibson-assembly-homemade-mix-protocol/</guid>
+    <description><![CDATA[<h2 id="overview">Overview</h2>
+<p>This protocol outlines how to prepare a homemade Gibson Assembly mix and carry out the reaction for cloning. It includes buffer preparation, enzyme mix, reaction setup, and transformation tips.</p>
+<hr>
+<h2 id="reagents">Reagents</h2>
+<ul>
+<li><strong>Taq DNA Ligase</strong> (NEB; M0208L)</li>
+<li><strong>T5 Exonuclease</strong> (NEB; M0363S)</li>
+<li><strong>Phusion HF DNA Polymerase</strong> (NEB; M0530S)</li>
+<li><strong>β-Nicotinamide adenine dinucleotide (NAD⁺)</strong> (NEB; B9007S)</li>
+<li><strong>JM109 Chemical Competent Cells</strong> (Promega; L2005)</li>
+<li><strong>10-beta Electrocompetent <em>E. coli</em></strong> (NEB; C3020K)</li>
+<li><strong>ElectroMAX™ Stbl4™ Competent Cells</strong> (Invitrogen; 11635-018)</li>
+</ul>
+<hr>
+<h2 id="-5-iso-reaction-buffer-6-ml">🧪 5× ISO Reaction Buffer (6 mL)</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Reagent</th>
+          <th>Amount</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1 M Tris-HCl pH 7.5</td>
+          <td>3.0 mL</td>
+      </tr>
+      <tr>
+          <td>2 M MgCl₂</td>
+          <td>150 μL</td>
+      </tr>
+      <tr>
+          <td>100 mM dGTP</td>
+          <td>60 μL</td>
+      </tr>
+      <tr>
+          <td>100 mM dATP</td>
+          <td>60 μL</td>
+      </tr>
+      <tr>
+          <td>100 mM dTTP</td>
+          <td>60 μL</td>
+      </tr>
+      <tr>
+          <td>100 mM dCTP</td>
+          <td>60 μL</td>
+      </tr>
+      <tr>
+          <td>1 M DTT</td>
+          <td>300 μL</td>
+      </tr>
+      <tr>
+          <td>PEG-8000</td>
+          <td>1.5 g</td>
+      </tr>
+      <tr>
+          <td>100 mM NAD⁺</td>
+          <td>300 μL</td>
+      </tr>
+      <tr>
+          <td>Nuclease-free H₂O</td>
+          <td>to 6 mL</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>📌 <strong>Aliquot 350 μL</strong> and store at <strong>−20 °C</strong>. Stable for 1 year.</p></blockquote>
+<hr>
+<h2 id="2-gibson-assembly-master-mix-12-ml">2× Gibson Assembly Master Mix (1.2 mL)</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Reagent</th>
+          <th>Amount</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>5× ISO Buffer</td>
+          <td>320 μL</td>
+      </tr>
+      <tr>
+          <td>T5 Exonuclease (10 U/μL)</td>
+          <td>0.64 μL</td>
+      </tr>
+      <tr>
+          <td>Phusion Polymerase (2 U/μL)</td>
+          <td>20 μL</td>
+      </tr>
+      <tr>
+          <td>Taq DNA Ligase (40 U/μL)</td>
+          <td>160 μL</td>
+      </tr>
+      <tr>
+          <td>Nuclease-free H₂O</td>
+          <td>up to 1.2 mL</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>📌 <strong>Aliquot 100 μL</strong> and store at <strong>−20 °C</strong>. Stable for 1 year.</p></blockquote>
+<hr>
+<h2 id="assembly-reaction-setup">Assembly Reaction Setup</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Component</th>
+          <th>20 μL Reaction</th>
+          <th>10 μL Reaction</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>2× Gibson Master Mix</td>
+          <td>10 μL</td>
+          <td>5 μL</td>
+      </tr>
+      <tr>
+          <td>Digested Plasmid</td>
+          <td>x μL</td>
+          <td>x μL</td>
+      </tr>
+      <tr>
+          <td>Insert DNA (1:2–10 molar ratio)</td>
+          <td>y μL</td>
+          <td>y μL</td>
+      </tr>
+      <tr>
+          <td>Nuclease-free H₂O</td>
+          <td>z μL</td>
+          <td>z μL</td>
+      </tr>
+      <tr>
+          <td><strong>Total Volume</strong></td>
+          <td>20 μL</td>
+          <td>10 μL</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>⚠️ Use a molar ratio of <strong>1:2 to 1:10</strong> (plasmid : insert).</p></blockquote>
+<h3 id="-incubation">🔥 Incubation</h3>
+<p>Incubate at <strong>50 °C for 15 min to 2 hours</strong> (usually 2 hours).</p>
+<hr>
+<h2 id="transformation">Transformation</h2>
+<ul>
+<li>Use <strong>JM109 Chemical Competent Cells</strong> for inserts &lt;10 kb.</li>
+<li>Use <strong>Electrocompetent Cells</strong> (e.g., 10-beta or ElectroMAX™ Stbl4™) for inserts &gt;10 kb.</li>
+</ul>
+<hr>
+<blockquote>
+<p>✅ Homemade Gibson is cost-effective and reliable for many cloning workflows, especially in high-throughput settings.</p></blockquote>]]></description>
+</item>
+</channel>
+</rss>

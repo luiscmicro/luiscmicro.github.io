@@ -1,0 +1,84 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Metabolomics - Category - Luis Cantu</title>
+        <link>https://luiscmicro.github.io/categories/metabolomics/</link>
+        <description>Metabolomics - Category - Luis Cantu</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>luis_cantu@berkeley.edu (Luis Cantu)</managingEditor>
+            <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><lastBuildDate>Thu, 17 Apr 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://luiscmicro.github.io/categories/metabolomics/" rel="self" type="application/rss+xml" /><item>
+    <title>Protocol for Small Molecule Solvent Extractions</title>
+    <link>https://luiscmicro.github.io/protocols/protocol-for-small-molecule-solvent-extractions/</link>
+    <pubDate>Thu, 17 Apr 2025 00:00:00 &#43;0000</pubDate>
+    <author>Luis Cantu</author>
+    <guid>https://luiscmicro.github.io/protocols/protocol-for-small-molecule-solvent-extractions/</guid>
+    <description><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>This protocol outlines the steps for extracting small molecules produced by <em>Actinomycetota</em> colonies grown on solid media. Colonies are allowed to grow and produce secondary metabolites, after which a small <strong>agar &ldquo;plug&rdquo;</strong> containing the colony is removed using a sterile plug corer or biopsy punch. The plug is then subjected to <strong>solvent extraction</strong> to recover diffusible metabolites for downstream analysis, such as LC-MS.</p>
+<h3 id="definitions">Definitions</h3>
+<ul>
+<li><strong>Plug</strong>: A small cylindrical section of agar (typically 6–8 mm in diameter) containing microbial growth, excised using a plug tool or biopsy punch.</li>
+<li><strong>Solvent extraction</strong>: A chemical method used to isolate small molecules by mixing biological samples with solvents (e.g., methanol, ethyl acetate) that dissolve specific classes of compounds.</li>
+<li><strong>Secondary metabolites</strong>: Bioactive small molecules produced by microbes, often during stationary phase, which can include antibiotics, pigments, or signaling compounds.</li>
+</ul>
+<h1 id="protocol-for-solvent-extractions">Protocol for Solvent Extractions</h1>
+<ol>
+<li>
+<p>Add the plugs to <strong>750 µL</strong> of solvent <em>(methanol and ethyl acetate are most commonly used)</em> in an Eppendorf tube.</p>
+</li>
+<li>
+<p>Vortex, sonicate for <strong>10 minutes</strong>, and let sit at <strong>room temperature</strong> for at least <strong>1 hour</strong> (or up to 24 hours).</p>
+</li>
+<li>
+<p>Vortex again and transfer the solvent to a new <strong>1.5 mL Eppendorf tube</strong>.</p>
+</li>
+<li>
+<p><strong>SpeedVac</strong> to evaporate all solvent:</p>
+<ul>
+<li>~15 min for EtOAc</li>
+<li>~45 min for MeOH</li>
+<li>~1 hour for water</li>
+</ul>
+<blockquote>
+<p>⚠️ Use the <strong>lowest vacuum level</strong> for ethyl acetate (EtOAc), as it&rsquo;s very volatile. Check the chart next to the SpeedVac.</p></blockquote>
+</li>
+<li>
+<p>Re-suspend the pellet in <strong>500 µL methanol + reserpine</strong> (10 or 100 ng/mL).</p>
+<ul>
+<li><em>10 ng/mL is usually enough</em></li>
+<li><em>100 ng/mL gives a more robust peak, but may interfere with co-eluting compounds</em></li>
+<li>For water extractions, use <strong>50:50 methanol:water</strong>.</li>
+</ul>
+</li>
+<li>
+<p>Vortex, <strong>sonicate for 5 min</strong>, then vortex again.</p>
+</li>
+<li>
+<p>Centrifuge for <strong>5 min at 14,000 rpm</strong>.</p>
+</li>
+<li>
+<p>Using solvent-safe pipette tips, <strong>transfer supernatant to LCMS vial</strong>, leaving <strong>~50 µL</strong> behind to avoid disturbing the pellet.</p>
+</li>
+<li>
+<p><strong>Inspect visually</strong> for any floating particles.</p>
+<ul>
+<li>If particles are present, transfer to a new Eppendorf tube and <strong>repeat steps 7–8</strong>.</li>
+<li>Ensure it&rsquo;s particle-free before submitting to LCMS.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="-tips">💡 Tips</h2>
+<ul>
+<li><strong>Always use solvent-safe tips</strong>. Contaminants from regular tips (e.g., Genesee/Olympus) have caused serious issues.</li>
+<li><strong>Always include media and solvent controls</strong> in your run.</li>
+<li>Some labs wash Eppendorf tubes before extractions to remove contaminants. We don’t, as long as extraction controls are included:
+<ul>
+<li>Solvent-only control</li>
+<li>Sterile media control</li>
+</ul>
+</li>
+<li>For <strong>small extractions (3–4 plugs)</strong>, use <strong>500 µL solvent</strong>, and re-suspend in <strong>100 µL</strong>. Use <strong>vial inserts</strong> for LCMS.</li>
+<li><strong>Reserpine</strong> is not required, but helpful to confirm LCMS injection success.</li>
+<li>Avoid extracting in <strong>pure water</strong> – it solubilizes media components and introduces noise into the data.</li>
+</ul>]]></description>
+</item>
+</channel>
+</rss>

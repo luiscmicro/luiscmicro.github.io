@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Segmentation of MALDI-IMS Experiments of Bacterial Interspecies Interactions Using CardinalIMS - Luis Cantu</title><meta name="Description" content="Unsupervised analysis of bacterial interspecies interactions using MALDI-IMS and the Cardinal package in R."><meta property="og:url" content="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/">
+  <meta property="og:site_name" content="Luis Cantu">
+  <meta property="og:title" content="Segmentation of MALDI-IMS Experiments of Bacterial Interspecies Interactions Using CardinalIMS">
+  <meta property="og:description" content="Unsupervised analysis of bacterial interspecies interactions using MALDI-IMS and the Cardinal package in R.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-24T13:36:48-07:00">
+    <meta property="og:image" content="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/featured-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/featured-image.png">
+  <meta name="twitter:title" content="Segmentation of MALDI-IMS Experiments of Bacterial Interspecies Interactions Using CardinalIMS">
+  <meta name="twitter:description" content="Unsupervised analysis of bacterial interspecies interactions using MALDI-IMS and the Cardinal package in R.">
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/" /><link rel="prev" href="https://luiscmicro.github.io/2025-04-09-analytical-chemistry/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Segmentation of MALDI-IMS Experiments of Bacterial Interspecies Interactions Using CardinalIMS",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/luiscmicro.github.io\/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/luiscmicro.github.io\/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions\/featured-image.png",
+                            "width":  5918 ,
+                            "height":  2951 
+                        }],"genre": "posts","wordcount":  771 ,
+        "url": "https:\/\/luiscmicro.github.io\/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions\/","datePublished": "2025-04-24T00:00:00+00:00","dateModified": "2025-04-24T13:36:48-07:00","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/luiscmicro.github.io\/images\/avatar.png",
+                    "width":  499 ,
+                    "height":  498 
+                }},"author": {
+                "@type": "Person",
+                "name": "Luis Cantu"
+            },"description": "Unsupervised analysis of bacterial interspecies interactions using MALDI-IMS and the Cardinal package in R."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Luis Cantu">Luis Cantu</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/publications/2025-04-09-publications"> Publications </a><a class="menu-item" href="/cv/"> CV </a><a class="menu-item" href="/protocols/"> Protocols </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Luis Cantu">Luis Cantu</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/publications/2025-04-09-publications" title="">Publications</a><a class="menu-item" href="/cv/" title="">CV</a><a class="menu-item" href="/protocols/" title="">Protocols</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Segmentation of MALDI-IMS Experiments of Bacterial Interspecies Interactions Using CardinalIMS</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Luis Cantu</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-04-24">2025-04-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;771 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/featured-image.png"
+        data-srcset="/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/featured-image.png, /2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/featured-image.png 1.5x, /2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/featured-image.png 2x"
+        data-sizes="auto"
+        alt="/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/featured-image.png"
+        title="Unsupervised analysis of bacterial interspecies interactions using MALDI-IMS and the Cardinal package in R." /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-introduction">1. Introduction</a></li>
+    <li><a href="#2-growing-cells-and-preparing-samples">2. Growing cells and preparing samples</a></li>
+    <li><a href="#3-unsupervised-segmentation">3. Unsupervised Segmentation</a>
+      <ul>
+        <li><a href="#31-pre-processing">3.1 Pre-processing</a></li>
+        <li><a href="#32-visualization">3.2 Visualization</a></li>
+        <li><a href="#33-clustering-and-segmentation">3.3 Clustering and segmentation</a>
+          <ul>
+            <li><a href="#plotting-and-interpretting-t-statistics-of-the-mz-values">Plotting and interpretting t-statistics of the m/z values</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Unsupervised analysis of bacterial interspecies interactions using MALDI-IMS and the Cardinal package in R.</p>
+<!-- more -->
+<h2 id="1-introduction">1. Introduction</h2>
+<p>The goal of this post is to showcase unsupervised analysis of MALDI-IMS experiments to discover chemical diversification during interspecies interactions of actinomycetota. Briefly, the setup involves growing patches of</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-r">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">Cardinal</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">knitr</span><span class="p">)</span></span></span></code></pre></div></div>
+<h2 id="2-growing-cells-and-preparing-samples">2. Growing cells and preparing samples</h2>
+<p>The following procedure was used to prepare samples for MALDI-IMS analysis:</p>
+<ul>
+<li>Media preparation: ISP2 medium was poured into 10 cm Petri dishes to a thickness of approximately 3 mm.</li>
+<li>Spore placement:
+<ul>
+<li>0.5 µL of Amycolaptosis AA4 spore stock was spotted onto the agar.</li>
+<li>2 mm away, 0.5 µL of Streptomyces coelicolor spore stock was placed to allow interaction.</li>
+<li>An additional 0.5 µL patch of S. coelicolor was placed 2 cm to the right of the interacting pair to serve as a non-interacting control.</li>
+</ul>
+</li>
+<li>Incubation: Plates were incubated at 30 °C for 2 days.</li>
+<li>Sample preparation: A square of agar containing the interaction region was excised and placed onto a MALDI target plate.</li>
+<li>Drying: The agar samples on the target plate were dried at 30 °C for 5 minutes.</li>
+<li>Matrix application: Matrix was deposited via sublimation following Rita&rsquo;s method.</li>
+</ul>
+<p><figure><a class="lightgallery" href="/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/Sample-prep.png" title="Dried Sample on MALDI Target plate" data-thumbnail="/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/Sample-prep.png" data-sub-html="<h2>Title</h2><p>Dried Sample on MALDI Target plate</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/Sample-prep.png"
+            data-srcset="/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/Sample-prep.png, /2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/Sample-prep.png 1.5x, /2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/Sample-prep.png 2x"
+            data-sizes="auto"
+            alt="/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/Sample-prep.png" width="380" height="153" />
+    </a><figcaption class="image-caption">Title</figcaption>
+    </figure></p>
+<h2 id="3-unsupervised-segmentation">3. Unsupervised Segmentation</h2>
+<p>We collect the sample using MALDI-IMS module on a Thermo-Fisher orbitrap.</p>
+<p>First, we load .imzML files and plot a known ion. Even without preprocessing, we can detect known molecules by m/z—for example, amychelin, a siderophore produced by Amycolaptosis AA4.</p>
+<p>However, raw ion images are noisy and make spatial interpretation difficult.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-r">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">wt_aa4_path1</span> <span class="o">&lt;-</span> <span class="s">&#34;msdata/040922_wt-aa4-2mm-1.imzml&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">wt_aa4_1</span> <span class="o">&lt;-</span> <span class="nf">readMSIData</span><span class="p">(</span><span class="n">wt_aa4_path1</span><span class="p">,</span><span class="n">resolution</span> <span class="o">=</span> <span class="m">100</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s">&#34;ppm&#34;</span><span class="p">,</span><span class="n">mass.range</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">150</span><span class="p">,</span><span class="m">1500</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nf">image</span><span class="p">(</span><span class="n">wt_aa4_1</span><span class="p">,</span> <span class="n">mz</span><span class="o">=</span><span class="m">761.3</span><span class="p">,</span><span class="n">tolerance</span><span class="o">=</span><span class="m">50</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s">&#34;ppm&#34;</span><span class="p">,</span><span class="n">smooth</span><span class="o">=</span><span class="s">&#34;gaussian&#34;</span><span class="p">,</span> <span class="n">enhance</span><span class="o">=</span><span class="s">&#34;histogram&#34;</span><span class="p">)</span></span></span></code></pre></div></div>
+<img src="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/index.en_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+<h3 id="31-pre-processing">3.1 Pre-processing</h3>
+<p>We then normalize across pixels using total ion current (TIC) so that we can compare peaks across pixels. Then we can filter for high-quality peaks using peak processing: we use a subsample (30% of the spectra) of the dataset to create reference peaks and set a signal to noise ratio (SNR=3) to identify peaks, then we filter the lowest frequent filters (filterFeq=0.02).</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-r">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">wt_aa4_1</span> <span class="o">&lt;-</span> <span class="nf">summarizeFeatures</span><span class="p">(</span><span class="n">wt_aa4_1</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="n">Mean</span><span class="o">=</span><span class="s">&#34;mean&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">wt_aa4_peaks</span> <span class="o">&lt;-</span> <span class="n">wt_aa4_1</span> <span class="o">|&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">normalize</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">&#34;tic&#34;</span><span class="p">)</span> <span class="o">|&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">peakProcess</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">&#34;diff&#34;</span><span class="p">,</span><span class="n">SNR</span><span class="o">=</span><span class="m">3</span><span class="p">,</span> <span class="n">sampleSize</span><span class="o">=</span><span class="m">0.3</span><span class="p">,</span><span class="n">filterFreq</span><span class="o">=</span><span class="m">0.02</span><span class="p">)</span></span></span></code></pre></div></div>
+<h3 id="32-visualization">3.2 Visualization</h3>
+<p>Let’s re-plot amychelin before and after processing.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-r">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">amychelin_before</span><span class="o">&lt;-</span> <span class="nf">image</span><span class="p">(</span><span class="n">wt_aa4_1</span><span class="p">,</span> <span class="n">mz</span><span class="o">=</span><span class="m">761.3</span><span class="p">,</span><span class="n">smooth</span><span class="o">=</span><span class="s">&#34;gaussian&#34;</span><span class="p">,</span> <span class="n">enhance</span><span class="o">=</span><span class="s">&#34;histogram&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">amychelin_after</span> <span class="o">&lt;-</span> <span class="nf">image</span><span class="p">(</span><span class="n">wt_aa4_peaks</span><span class="p">,</span> <span class="n">mz</span><span class="o">=</span><span class="m">761.3</span><span class="p">,</span><span class="n">smooth</span><span class="o">=</span><span class="s">&#34;gaussian&#34;</span><span class="p">,</span> <span class="n">enhance</span><span class="o">=</span><span class="s">&#34;histogram&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">matter</span><span class="o">::</span><span class="nf">as_facets</span><span class="p">(</span><span class="nf">list</span><span class="p">(</span><span class="n">amychelin_before</span><span class="p">,</span> <span class="n">amychelin_after</span><span class="p">),</span> <span class="n">nrow</span><span class="o">=</span><span class="m">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">labels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#34;Before procesing&#34;</span><span class="p">,</span> <span class="s">&#34;After processing&#34;</span><span class="p">))</span></span></span></code></pre></div></div>
+<img src="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/index.en_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+We can see that we've sucesfully reduced noise in the image and we can now see spatially distinct regions where molecules are being produced.
+<h3 id="33-clustering-and-segmentation">3.3 Clustering and segmentation</h3>
+<p>We use <code>spatialShrunkenCentroids()</code> to perform unsupervised segmentation of spatially variable features.</p>
+<p><strong>Key parameters:</strong></p>
+<ul>
+<li><code>weights</code>: spatial weighting method (&ldquo;gaussian&rdquo; or &ldquo;adaptive&rdquo;)</li>
+<li><code>r</code>: neighborhood radius</li>
+<li><code>k</code>: max number of clusters (some may be dropped)</li>
+<li><code>s</code>: sparsity parameter; higher values result in fewer selected peaks</li>
+</ul>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-r">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">set.seed</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">wt_aa4_ssc</span> <span class="o">&lt;-</span> <span class="nf">spatialShrunkenCentroids</span><span class="p">(</span><span class="n">wt_aa4_peaks</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">weights</span><span class="o">=</span><span class="s">&#34;gaussian&#34;</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="m">3</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="m">8</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="m">2</span><span class="nf">^</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">))</span></span></span></code></pre></div></div>
+<p>Let’s examine the results.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-r">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl">  <span class="nf">kable</span><span class="p">(</span><span class="n">wt_aa4_ssc</span><span class="o">@</span><span class="n">elementMetadata</span><span class="p">,</span><span class="s">&#34;pipe&#34;</span><span class="p">)</span></span></span></code></pre></div></div>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: right">r</th>
+          <th style="text-align: right">k</th>
+          <th style="text-align: right">s</th>
+          <th style="text-align: left">weights</th>
+          <th style="text-align: right">clusters</th>
+          <th style="text-align: right">sparsity</th>
+          <th style="text-align: right">AIC</th>
+          <th style="text-align: right">BIC</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">r=3,k=8,s=2</td>
+          <td style="text-align: right">3</td>
+          <td style="text-align: right">8</td>
+          <td style="text-align: right">2</td>
+          <td style="text-align: left">gaussian</td>
+          <td style="text-align: right">8</td>
+          <td style="text-align: right">0.53</td>
+          <td style="text-align: right">10220.679</td>
+          <td style="text-align: right">39651.66</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">r=3,k=8,s=4</td>
+          <td style="text-align: right">3</td>
+          <td style="text-align: right">8</td>
+          <td style="text-align: right">4</td>
+          <td style="text-align: left">gaussian</td>
+          <td style="text-align: right">8</td>
+          <td style="text-align: right">0.76</td>
+          <td style="text-align: right">6438.096</td>
+          <td style="text-align: right">24338.37</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">r=3,k=8,s=8</td>
+          <td style="text-align: right">3</td>
+          <td style="text-align: right">8</td>
+          <td style="text-align: right">8</td>
+          <td style="text-align: left">gaussian</td>
+          <td style="text-align: right">8</td>
+          <td style="text-align: right">0.92</td>
+          <td style="text-align: right">5084.403</td>
+          <td style="text-align: right">15003.83</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">r=3,k=8,s=16</td>
+          <td style="text-align: right">3</td>
+          <td style="text-align: right">8</td>
+          <td style="text-align: right">16</td>
+          <td style="text-align: left">gaussian</td>
+          <td style="text-align: right">8</td>
+          <td style="text-align: right">0.99</td>
+          <td style="text-align: right">6159.078</td>
+          <td style="text-align: right">12956.65</td>
+      </tr>
+  </tbody>
+</table>
+<p>We can visualize the results and pick one that has low sparcity and the correct number of clusters that is biologically relevant.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-r">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">image</span><span class="p">(</span><span class="n">wt_aa4_ssc</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">)</span></span></span></code></pre></div></div>
+<img src="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/index.en_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+<p>We choose the second result as it we can still see clearly each colony and the surrounding areas are distinct.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-r">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">wt_aa4_ssc1</span> <span class="o">&lt;-</span> <span class="n">wt_aa4_ssc[[2]]</span>
+</span></span><span class="line"><span class="cl"><span class="nf">image</span><span class="p">(</span><span class="n">wt_aa4_ssc1</span><span class="p">,</span> <span class="n">type</span><span class="o">=</span><span class="s">&#34;class&#34;</span><span class="p">)</span></span></span></code></pre></div></div>
+<img src="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/index.en_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+<p>Here we can start making some interpretations of the five discrete regions in this model:</p>
+<ol>
+<li><em>Amycolaptosis AA4</em> during interactions with <em>S. coelicolor</em></li>
+<li><em>S. coelicolor</em> during interactions with <em>Amycolaptosis AA4</em></li>
+<li><em>S. coelicolor</em> alone</li>
+<li>Media (around <em>S. coelicolor</em>)</li>
+<li>Media (around <em>S. coelicolor</em> during interactions)</li>
+<li>Noise</li>
+<li>Media (around <em>Amycolaptosis AA4</em>)</li>
+<li>Noise</li>
+</ol>
+<p>Let’s compare segments of interest 1, 2, and 3.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-r">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">plot</span><span class="p">(</span><span class="n">wt_aa4_ssc1</span><span class="p">,</span> <span class="n">type</span><span class="o">=</span><span class="s">&#34;centers&#34;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">select</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">),</span> <span class="n">superpose</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">))</span></span></span></code></pre></div></div>
+<img src="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/index.en_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+<p>It is difficult to discern which peaks change based on ssc segmentation by looking at the whole spectra, so we must plot the t-statistics.</p>
+<h4 id="plotting-and-interpretting-t-statistics-of-the-mz-values">Plotting and interpretting t-statistics of the m/z values</h4>
+<p>The t-statistics compare segment-specific centroids to the global mean:</p>
+<ul>
+<li>Positive = enriched in that segment</li>
+<li>Negative = depleted in that segment</li>
+</ul>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-r">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">plot</span><span class="p">(</span><span class="n">wt_aa4_ssc1</span><span class="p">,</span> <span class="n">type</span><span class="o">=</span><span class="s">&#34;statistic&#34;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="m">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">select</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">),</span> <span class="n">superpose</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">))</span></span></span></code></pre></div></div>
+<img src="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/index.en_files/figure-html/unnamed-chunk-10-1.png" width="672" />
+<p>We can now see that there are peaks that are distinct in each region. In particular, if we compare segment 2 and segment 3. Segment 2 is the patch with <em>S. coelicolor</em> during the interaction and it has more peaks than when it&rsquo;s grown alone but also at a higher statistical difference.</p>
+<p>Let’s visualize the top m/z features from each of the segments we are interested.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-r">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">wt_aa4_ssc_top</span> <span class="o">&lt;-</span> <span class="nf">topFeatures</span><span class="p">(</span><span class="n">wt_aa4_ssc1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl"><span class="nf">image</span><span class="p">(</span><span class="n">wt_aa4_peaks</span><span class="p">,</span> <span class="n">mz</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="nf">head</span><span class="p">(</span><span class="nf">subset</span><span class="p">(</span><span class="n">wt_aa4_ssc_top</span><span class="p">,</span> <span class="n">class</span><span class="o">==</span><span class="m">1</span><span class="p">)</span><span class="o">$</span><span class="n">mz</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="m">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                         <span class="nf">head</span><span class="p">(</span><span class="nf">subset</span><span class="p">(</span><span class="n">wt_aa4_ssc_top</span><span class="p">,</span> <span class="n">class</span><span class="o">==</span><span class="m">2</span><span class="p">)</span><span class="o">$</span><span class="n">mz</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="m">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                         <span class="nf">head</span><span class="p">(</span><span class="nf">subset</span><span class="p">(</span><span class="n">wt_aa4_ssc_top</span><span class="p">,</span> <span class="n">class</span><span class="o">==</span><span class="m">3</span><span class="p">)</span><span class="o">$</span><span class="n">mz</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="m">1</span><span class="p">)),</span> <span class="n">smooth</span><span class="o">=</span><span class="s">&#34;gaussian&#34;</span><span class="p">,</span> <span class="n">enhance</span><span class="o">=</span><span class="s">&#34;histogram&#34;</span><span class="p">,</span><span class="n">layout</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">))</span></span></span></code></pre></div></div>
+<img src="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/index.en_files/figure-html/unnamed-chunk-11-1.png" width="672" />
+<p>Clearly we see peaks that are unique to <em>Amycolaptosis AA4</em> and peaks that are present in <em>S. coelicolor</em> during interactions or alone. More importantly we detect these peaks in an unsupervised manner.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-04-24</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/" data-title="Segmentation of MALDI-IMS Experiments of Bacterial Interspecies Interactions Using CardinalIMS" data-via="s_coelicolor"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/" data-title="Segmentation of MALDI-IMS Experiments of Bacterial Interspecies Interactions Using CardinalIMS"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/" data-title="Segmentation of MALDI-IMS Experiments of Bacterial Interspecies Interactions Using CardinalIMS"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/" data-title="Segmentation of MALDI-IMS Experiments of Bacterial Interspecies Interactions Using CardinalIMS"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@14.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/" data-title="Segmentation of MALDI-IMS Experiments of Bacterial Interspecies Interactions Using CardinalIMS"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://luiscmicro.github.io/2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions/" data-title="Segmentation of MALDI-IMS Experiments of Bacterial Interspecies Interactions Using CardinalIMS" data-description="Unsupervised analysis of bacterial interspecies interactions using MALDI-IMS and the Cardinal package in R."><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fluiscmicro.github.io%2f2025-04-24-segmentation-of-ms-imaging-of-bacterial-interspecies-interactions%2f&amp;text=Segmentation%20of%20MALDI-IMS%20Experiments%20of%20Bacterial%20Interspecies%20Interactions%20Using%20CardinalIMS" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2025-04-09-analytical-chemistry/" class="prev" rel="prev" title="Analytical Chemistry"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Analytical Chemistry</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Luis Cantu</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

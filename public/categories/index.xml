@@ -7,17 +7,33 @@
             <webMaster>luis_cantu@berkeley.edu (Luis Cantu)</webMaster><atom:link href="https://luiscmicro.github.io/categories/" rel="self" type="application/rss+xml" /><item>
     <title>Biochemistry</title>
     <link>https://luiscmicro.github.io/categories/biochemistry/</link>
-    <pubDate>Fri, 18 Apr 2025 00:00:00 &#43;0000</pubDate>
+    <pubDate>Wed, 23 Apr 2025 00:00:00 &#43;0000</pubDate>
     <author>Luis Cantu</author>
     <guid>https://luiscmicro.github.io/categories/biochemistry/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>LCMS</title>
-    <link>https://luiscmicro.github.io/categories/lcms/</link>
+    <title>Metabolomics</title>
+    <link>https://luiscmicro.github.io/categories/metabolomics/</link>
     <pubDate>Thu, 17 Apr 2025 00:00:00 &#43;0000</pubDate>
     <author>Luis Cantu</author>
-    <guid>https://luiscmicro.github.io/categories/lcms/</guid>
+    <guid>https://luiscmicro.github.io/categories/metabolomics/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Microbial Techniques</title>
+    <link>https://luiscmicro.github.io/categories/microbial-techniques/</link>
+    <pubDate>Thu, 17 Apr 2025 00:00:00 &#43;0000</pubDate>
+    <author>Luis Cantu</author>
+    <guid>https://luiscmicro.github.io/categories/microbial-techniques/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Molecular Biology</title>
+    <link>https://luiscmicro.github.io/categories/molecular-biology/</link>
+    <pubDate>Tue, 15 Apr 2025 00:00:00 &#43;0000</pubDate>
+    <author>Luis Cantu</author>
+    <guid>https://luiscmicro.github.io/categories/molecular-biology/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
@@ -34,6 +50,14 @@
     <pubDate>Wed, 09 Apr 2025 00:00:00 &#43;0000</pubDate>
     <author>Luis Cantu</author>
     <guid>https://luiscmicro.github.io/categories/publications/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Protein Purification</title>
+    <link>https://luiscmicro.github.io/categories/protein-purification/</link>
+    <pubDate>Fri, 10 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>Luis Cantu</author>
+    <guid>https://luiscmicro.github.io/categories/protein-purification/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
