@@ -49,14 +49,8 @@ Unsupervised analysis of bacterial interspecies interactions using MALDI-IMS and
 <!-- more -->
 ## 1. Introduction
 
-The goal of this post is to showcase unsupervised analysis of MALDI-IMS experiments to discover chemical diversification during interspecies interactions of actinomycetota. Briefly, the setup involves growing patches of 
+Understanding how bacteria modify their chemistry in response to nearby species is key to decoding interspecies interactions. In this post, we showcase an unsupervised analysis workflow for MALDI imaging mass spectrometry (MALDI-IMS) experiments aimed at uncovering spatial patterns of metabolite production during interspecies interactions of Actinomycetota. Using the Cardinal R package, we segment ion images without prior assumptions, allowing us to detect regions of chemical differentiation that emerge during microbial co-culture. Briefly, our setup involves growing spatially arranged patches of Amycolaptosis AA4 and Streptomyces coelicolor on solid medium, followed by sample preparation for high-resolution MALDI-IMS.
 
-
-``` r
-library(Cardinal)
-library(dplyr)
-library(knitr)
-```
 ## 2. Growing cells and preparing samples
 
 The following procedure was used to prepare samples for MALDI-IMS analysis:
@@ -71,11 +65,13 @@ The following procedure was used to prepare samples for MALDI-IMS analysis:
 - Drying: The agar samples on the target plate were dried at 30 °C for 5 minutes.
 - Matrix application: Matrix was deposited via sublimation following Rita's method.
 
-![Dried Sample on MALDI Target plate](Sample-prep.png "Title")
+![Dried Sample on MALDI Target plate](Sample-prep.png "Dried Sample on MALDI Target plate")
 
-## 3. Unsupervised Segmentation
+## 3. Data acquisition
 
-We collect the sample using MALDI-IMS module on a Thermo-Fisher orbitrap. 
+MALDI-IMS was performed in positive ion mode using a SubAP/MALDI(ng) source (MassTech, Columbia, MD). This ionization source has a small laser spot size (<10 μm) which provides high spatial resolution and is equipped with an ion funnel, which focuses ions into the mass spectrometer, improving the signal-to-noise ratio. (13) This SubAP/MALDI(ng) source was coupled to a Thermo Q-Exactive (Thermo Fisher Scientific, San Jose, CA) high-resolution mass spectrometer. Full MS1 scans were acquired in positive mode, with mass ranges of m/z 100–2000, with a typical range of 600–1600. The laser energy was 50–80% at 1 kHz repetition rate. Images were acquired using a pixel size of 10 μm at a laser velocity of 1.5 mm/min. 
+
+## 4. Unsupervised Segmentation
 
 First, we load .imzML files and plot a known ion. Even without preprocessing, we can detect known molecules by m/z—for example, amychelin, a siderophore produced by Amycolaptosis AA4.
 
@@ -83,14 +79,17 @@ However, raw ion images are noisy and make spatial interpretation difficult.
 
 
 ``` r
+library(Cardinal)
+library(dplyr)
+library(knitr)
 wt_aa4_path1 <- "msdata/040922_wt-aa4-2mm-1.imzml"
 wt_aa4_1 <- readMSIData(wt_aa4_path1,resolution = 100, units="ppm",mass.range=c(150,1500))
 image(wt_aa4_1, mz=761.3,tolerance=50, units="ppm",smooth="gaussian", enhance="histogram")
 ```
 
-<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-1-1.png" width="672" />
 
-### 3.1 Pre-processing
+### 4.1 Pre-processing
 
 We then normalize across pixels using total ion current (TIC) so that we can compare peaks across pixels. Then we can filter for high-quality peaks using peak processing: we use a subsample (30% of the spectra) of the dataset to create reference peaks and set a signal to noise ratio (SNR=3) to identify peaks, then we filter the lowest frequent filters (filterFeq=0.02).
 
@@ -102,9 +101,9 @@ wt_aa4_peaks <- wt_aa4_1 |>
   peakProcess(method="diff",SNR=3, sampleSize=0.3,filterFreq=0.02)
 ```
 
-### 3.2 Visualization
+### 4.2 Visualization
 
-Let’s re-plot amychelin before and after processing.
+At this point we can plot any known m/z and we should get much better quality. Let’s re-plot amychelin before and after processing.
 
 ``` r
 amychelin_before<- image(wt_aa4_1, mz=761.3,smooth="gaussian", enhance="histogram")
@@ -113,14 +112,15 @@ matter::as_facets(list(amychelin_before, amychelin_after), nrow=2,
     labels=c("Before procesing", "After processing"))
 ```
 
-<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-4-1.png" width="672" />
-We can see that we've sucesfully reduced noise in the image and we can now see spatially distinct regions where molecules are being produced.
+<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-3-1.png" width="672" />
 
-### 3.3 Clustering and segmentation
+We successfully reduced background noise in the ion image, allowing us to clearly observe spatially distinct regions of amychelin production. However, **relying solely on visual inspection of known ions limits our ability to uncover meaningful patterns**—especially in cases where the identities of the metabolites are unknown. In such scenarios, manually identifying features of interest becomes both subjective and impractical, **highlighting the need for unsupervised approaches to extract spatially resolved chemical signals**.
+
+### 4.3 Clustering and segmentation
 
 We use `spatialShrunkenCentroids()` to perform unsupervised segmentation of spatially variable features.
 
-**Key parameters:**
+Key parameters:
 
 - `weights`: spatial weighting method ("gaussian" or "adaptive")
 - `r`: neighborhood radius
@@ -150,14 +150,14 @@ Let’s examine the results.
 |r=3,k=8,s=16 |  3|  8| 16|gaussian |        8|     0.99|  6159.078| 12956.65|
 
 
-We can visualize the results and pick one that has low sparcity and the correct number of clusters that is biologically relevant.
+We can visualize the results and pick one that has **low sparcity** and the **correct number of clusters** that is biologically relevant.
 
 
 ``` r
 image(wt_aa4_ssc, i=1:4)
 ```
 
-<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-6-1.png" width="672" />
 
 We choose the second result as it we can still see clearly each colony and the surrounding areas are distinct. 
 
@@ -166,7 +166,7 @@ wt_aa4_ssc1 <- wt_aa4_ssc[[2]]
 image(wt_aa4_ssc1, type="class")
 ```
 
-<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-7-1.png" width="672" />
 
 Here we can start making some interpretations of the five discrete regions in this model:
   1. *Amycolaptosis AA4* during interactions with *S. coelicolor*
@@ -185,11 +185,11 @@ Let’s compare segments of interest 1, 2, and 3.
 plot(wt_aa4_ssc1, type="centers", linewidth=2, select=c(1,2,3), superpose=FALSE, layout=c(1,3))
 ```
 
-<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-8-1.png" width="672" />
 
 It is difficult to discern which peaks change based on ssc segmentation by looking at the whole spectra, so we must plot the t-statistics.
 
-#### Plotting and interpretting t-statistics of the m/z values
+#### 4.3.1 Plotting and interpretting t-statistics of the m/z values
 
 The t-statistics compare segment-specific centroids to the global mean:
 
@@ -204,7 +204,7 @@ plot(wt_aa4_ssc1, type="statistic", linewidth=2,
     select=c(1,2,3), superpose=FALSE, layout=c(1,3))
 ```
 
-<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-10-1.png" width="672" />
+<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-9-1.png" width="672" />
 
 We can now see that there are peaks that are distinct in each region. In particular, if we compare segment 2 and segment 3. Segment 2 is the patch with *S. coelicolor* during the interaction and it has more peaks than when it's grown alone but also at a higher statistical difference.
 
@@ -219,9 +219,18 @@ image(wt_aa4_peaks, mz=c(head(subset(wt_aa4_ssc_top, class==1)$mz, n=1),
                          head(subset(wt_aa4_ssc_top, class==3)$mz, n=1)), smooth="gaussian", enhance="histogram",layout=c(3,1))
 ```
 
-<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-11-1.png" width="672" />
+<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-10-1.png" width="672" />
 
 
-Clearly we see peaks that are unique to *Amycolaptosis AA4* and peaks that are present in *S. coelicolor* during interactions or alone. More importantly we detect these peaks in an unsupervised manner.
+## 5. Conclusions
+Unsupervised segmentation of MALDI-IMS data using the Cardinal package reveals clear spatial differentiation in metabolite production during interspecies interactions. We detect distinct ion peaks that are unique to *Amycolaptosis AA4*, as well as peaks that appear in *Streptomyces coelicolor* when growing alone versus during interaction. Importantly, these patterns were identified without prior knowledge of specific m/z features, highlighting the power of unsupervised methods for exploratory analysis.
+
+The spatial shrunken centroid approach not only identifies spatially enriched ions, but also associates them with specific biological regions. The t-statistic analysis shows that the region corresponding to interacting *S. coelicolor* exhibits more metabolite peaks than the non-interacting region, suggesting a metabolic response to the presence of AA4. Together, this workflow provides a robust framework for dissecting the spatial logic of microbial chemical interactions.
+
+## References
+
+1. Bemis, K. A., Foell, M. C., Guo, D., Lakkimsetty, S. S., & Vitek, O. (2023). *Cardinal v.3: a versatile open-source software for mass spectrometry imaging analysis.* *Nature Methods, 20*(12), 1883–1886. https://doi.org/10.1038/s41592-023-02070-z
+
+2. Pessotti, R. C., Hansen, B. L., Zacharia, V. M., Polyakov, D., & Traxler, M. F. (2019). *High spatial resolution imaging mass spectrometry reveals chemical heterogeneity across bacterial microcolonies.* *Analytical Chemistry, 91*(23), 14818–14823. https://doi.org/10.1021/acs.analchem.9b03909
 
 
